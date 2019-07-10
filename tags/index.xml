@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Ana Dodik</title>
+    <link>https://anadodik.com/tags/</link>
+    <description>Recent content in Tags on Ana Dodik</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; 2019, Ana Dodik. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 09 May 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anadodik.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>engineering</title>
+      <link>https://anadodik.com/tags/engineering/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://anadodik.com/tags/engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microcontroller</title>
+      <link>https://anadodik.com/tags/microcontroller/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://anadodik.com/tags/microcontroller/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenGL</title>
+      <link>https://anadodik.com/tags/opengl/</link>
+      <pubDate>Sat, 23 Jan 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://anadodik.com/tags/opengl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>demo</title>
+      <link>https://anadodik.com/tags/demo/</link>
+      <pubDate>Sat, 23 Jan 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://anadodik.com/tags/demo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>game</title>
+      <link>https://anadodik.com/tags/game/</link>
+      <pubDate>Sat, 23 Jan 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://anadodik.com/tags/game/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
