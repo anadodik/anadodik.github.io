@@ -260,10 +260,6 @@
         
 
         
-        <li class="nav-item">
-          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-        </li>
-        
 
       </ul>
 
@@ -336,8 +332,8 @@
             
             
             
-            <option value=".year-2017">
-              2017
+            <option value=".year-2020">
+              2020
             </option>
             
             
@@ -352,7 +348,7 @@
           
         
 
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-7 year-2017">
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-7 year-2020">
           
             
 
@@ -378,8 +374,8 @@
 
 
 
-<meta content="2017-09-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-07-10 10:27:14 &#43;0200 CEST" itemprop="dateModified">
+<meta content="2020-04-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2021-06-11 19:12:49 &#43;0200 CEST" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -404,7 +400,7 @@
     
       
     
-    <time>September 2017</time>
+    <time>April 2020</time>
   </span>
   
 
@@ -412,7 +408,7 @@
   <span class="middot-divider"></span>
   <span class="pub-publication">
     
-      Bachelor&rsquo;s thesis at TU Wien
+      Master&rsquo;s thesis at ETH Zurich
     
   </span>
   
@@ -422,7 +418,7 @@
   
   
   <span class="middot-divider"></span>
-  <a href="/publication/prob-conns/#disqus_thread"></a>
+  <a href="/publication/sdmm-thesis/#disqus_thread"></a>
   
 
   
@@ -438,18 +434,18 @@
   
   
   
-  <a href="/publication/prob-conns/">
-      <img src="/publication/prob-conns/featured_hu2e07449014debde23522bfcaf79cba0c_2185009_918x517_fill_q90_lanczos_smart1_2.png" class="article-banner" itemprop="image" alt="">
+  <a href="/publication/sdmm-thesis/">
+      <img src="/publication/sdmm-thesis/featured_hu63c15c5f39a33aaa045a7257db3d23ce_765803_918x517_fill_q90_lanczos_smart1_2.png" class="article-banner" itemprop="image" alt="">
   </a>
   
 
   <h3 class="article-title mb-1 mt-3" itemprop="name">
-    <a href="/publication/prob-conns/" itemprop="url">Implementing Probabilistic Connections for Bidirectional Path Tracing</a>
+    <a href="/publication/sdmm-thesis/" itemprop="url">Path Guiding using a Spatio-Directional Mixture Model</a>
   </h3>
 
   
   <div class="article-style" itemprop="articleBody">
-    Light transport simulation algorithms are remarkably adept at recreating a large variety of light phenomena which occur in nature. As such they have seen widespread adoption across the industry, which made it paramount to create efficient and robust algorithms. One recent algorithm which tries to deal with this problem is known as Probabilistic Connections for Bidirectional Path Tracing (PCBPT). It builds upon the classical Bidirectional Path Tracing (BDPT) algorithm. In Bidirectional Path Tracing, a ray is traced from the sensor as well as from the emitter. The two rays are then connected to calculate the light contribution to image pixels. PCBPT extends this idea to support connecting multiple emitter paths to one sensor subpath, and introduces importance sampling as a way of choosing the most suitable emitter paths. Unfortunately, there was no implementation of PCBPT publically available, which is why we implemented it into the open-source Mitsuba renderer. We evaluate the algorithm against standard BDPT on a variety of different scenes. Our comparisons provide insight into what type of scenes PCBPT can help improve and where the additional computational cost presents too much of an overhead.
+    In this thesis, we develop a path-guiding method based on a probability distribution which we name the spatio-directional mixture model (SDMM). Our algorithm fits SDMMs to the 5- dimensional radiance distribution in an online manner and is capable of representing it as one continuous function. Our method does not require us to explicitly discretize the scene, princi- pally deals with outlier samples and allows us to sample the product of the radiance distribution and the material model. Furthermore, we present a new geometry-aware initialization scheme, as well as a way of accelerating the training speed. We analyze the impact of the different components of our algorithm, and demonstrate its effectiveness by comparing it to Practical Path Guiding (PPG) [MGN17]. Indeed, we show that our algorithm outperforms PPG on equal- sample comparisons.
   </div>
   
 
@@ -470,7 +466,7 @@
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.cg.tuwien.ac.at/research/publications/2017/dodik-2017-pcbpt/dodik-2017-pcbpt-thesis.pdf" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.research-collection.ethz.ch/handle/20.500.11850/411118" target="_blank" rel="noopener">
   PDF
 </a>
 

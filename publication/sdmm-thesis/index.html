@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="A WiiMote controlled Pac-Man clone on the Atmega1280 microcontroller.">
+  <meta name="description" content="In this thesis, we develop a path-guiding method based on a probability distribution which we name the spatio-directional mixture model (SDMM). Our algorithm fits SDMMs to the 5- dimensional radiance distribution in an online manner and is capable of representing it as one continuous function. Our method does not require us to explicitly discretize the scene, princi- pally deals with outlier samples and allows us to sample the product of the radiance distribution and the material model. Furthermore, we present a new geometry-aware initialization scheme, as well as a way of accelerating the training speed. We analyze the impact of the different components of our algorithm, and demonstrate its effectiveness by comparing it to Practical Path Guiding (PPG) [MGN17]. Indeed, we show that our algorithm outperforms PPG on equal- sample comparisons.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://anadodik.com/project/haunted-maze/">
+  <link rel="alternate" hreflang="en-us" href="https://anadodik.com/publication/sdmm-thesis/">
 
   
 
@@ -95,7 +95,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://anadodik.com/project/haunted-maze/">
+  <link rel="canonical" href="https://anadodik.com/publication/sdmm-thesis/">
 
   
   
@@ -106,21 +106,21 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Ana Dodik">
-  <meta property="og:url" content="https://anadodik.com/project/haunted-maze/">
-  <meta property="og:title" content="Haunted Maze | Ana Dodik">
-  <meta property="og:description" content="A WiiMote controlled Pac-Man clone on the Atmega1280 microcontroller."><meta property="og:image" content="https://anadodik.com/project/haunted-maze/featured.png">
+  <meta property="og:url" content="https://anadodik.com/publication/sdmm-thesis/">
+  <meta property="og:title" content="Path Guiding using a Spatio-Directional Mixture Model | Ana Dodik">
+  <meta property="og:description" content="In this thesis, we develop a path-guiding method based on a probability distribution which we name the spatio-directional mixture model (SDMM). Our algorithm fits SDMMs to the 5- dimensional radiance distribution in an online manner and is capable of representing it as one continuous function. Our method does not require us to explicitly discretize the scene, princi- pally deals with outlier samples and allows us to sample the product of the radiance distribution and the material model. Furthermore, we present a new geometry-aware initialization scheme, as well as a way of accelerating the training speed. We analyze the impact of the different components of our algorithm, and demonstrate its effectiveness by comparing it to Practical Path Guiding (PPG) [MGN17]. Indeed, we show that our algorithm outperforms PPG on equal- sample comparisons."><meta property="og:image" content="https://anadodik.com/publication/sdmm-thesis/featured.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2016-05-09T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2020-04-20T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-07-10T10:27:14&#43;02:00">
-  
-
+  <meta property="article:modified_time" content="2021-06-11T19:12:49&#43;02:00">
   
 
   
 
-  <title>Haunted Maze | Ana Dodik</title>
+  
+
+  <title>Path Guiding using a Spatio-Directional Mixture Model | Ana Dodik</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -266,8 +266,7 @@
   </div>
 </nav>
 
-
-<article class="article article-project" itemscope itemtype="http://schema.org/Article">
+<div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
 
   
 
@@ -284,7 +283,7 @@
 
 
 <div class="article-header d-xl-none">
-  <div class="featured-image" style="background-image: url('/project/haunted-maze/featured_hued72505d01d2eef495e4d72cf1454430_6823_800x0_resize_lanczos_2.png');"></div>
+  <div class="featured-image" style="background-image: url('/publication/sdmm-thesis/featured_hu63c15c5f39a33aaa045a7257db3d23ce_765803_800x0_resize_lanczos_2.png');"></div>
   
 </div>
 
@@ -293,7 +292,7 @@
   <div class="row">
     <div class="col-6">
       <div class="split-header-content">
-        <h1 itemprop="name">Haunted Maze</h1>
+        <h1 itemprop="name">Path Guiding using a Spatio-Directional Mixture Model</h1>
 
         
 
@@ -301,11 +300,23 @@
 
 
 
-<meta content="2016-05-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-07-10 10:27:14 &#43;0200 CEST" itemprop="dateModified">
+<meta content="2020-04-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2021-06-11 19:12:49 &#43;0200 CEST" itemprop="dateModified">
 
 <div class="article-metadata">
 
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/ana-dodik/">Ana Dodik</a></span>
+
+  </div>
   
   
 
@@ -314,10 +325,8 @@
     
     
       
-          Last updated on
-      
     
-    <time>Jul 10, 2019</time>
+    <time>April 2020</time>
   </span>
   
 
@@ -328,7 +337,7 @@
   
   
   <span class="middot-divider"></span>
-  <a href="/project/haunted-maze/#disqus_thread"></a>
+  <a href="/publication/sdmm-thesis/#disqus_thread"></a>
   
 
   
@@ -353,6 +362,45 @@
 
 
 
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://www.research-collection.ethz.ch/handle/20.500.11850/411118" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
 
 
         
@@ -360,35 +408,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Haunted%20Maze&amp;url=https%3a%2f%2fanadodik.com%2fproject%2fhaunted-maze%2f"
+         href="https://twitter.com/intent/tweet?text=Path%20Guiding%20using%20a%20Spatio-Directional%20Mixture%20Model&amp;url=https%3a%2f%2fanadodik.com%2fpublication%2fsdmm-thesis%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fanadodik.com%2fproject%2fhaunted-maze%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fanadodik.com%2fpublication%2fsdmm-thesis%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fanadodik.com%2fproject%2fhaunted-maze%2f&amp;title=Haunted%20Maze"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fanadodik.com%2fpublication%2fsdmm-thesis%2f&amp;title=Path%20Guiding%20using%20a%20Spatio-Directional%20Mixture%20Model"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fanadodik.com%2fproject%2fhaunted-maze%2f&amp;title=Haunted%20Maze"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fanadodik.com%2fpublication%2fsdmm-thesis%2f&amp;title=Path%20Guiding%20using%20a%20Spatio-Directional%20Mixture%20Model"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Haunted%20Maze&amp;body=https%3a%2f%2fanadodik.com%2fproject%2fhaunted-maze%2f">
+         href="mailto:?subject=Path%20Guiding%20using%20a%20Spatio-Directional%20Mixture%20Model&amp;body=https%3a%2f%2fanadodik.com%2fpublication%2fsdmm-thesis%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -400,7 +448,7 @@
     </div>
     <div class="col-6">
       <div class="split-header-image">
-        <img src="/project/haunted-maze/featured_hued72505d01d2eef495e4d72cf1454430_6823_680x500_fill_q90_lanczos_smart1_2.png" itemprop="image" alt="">
+        <img src="/publication/sdmm-thesis/featured_hu63c15c5f39a33aaa045a7257db3d23ce_765803_680x500_fill_q90_lanczos_smart1_2.png" itemprop="image" alt="">
         
       </div>
     </div>
@@ -408,7 +456,7 @@
 </div>
 
 <div class="article-container d-xl-none">
-  <h1 itemprop="name">Haunted Maze</h1>
+  <h1 itemprop="name">Path Guiding using a Spatio-Directional Mixture Model</h1>
 
   
 
@@ -416,11 +464,23 @@
 
 
 
-<meta content="2016-05-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-07-10 10:27:14 &#43;0200 CEST" itemprop="dateModified">
+<meta content="2020-04-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2021-06-11 19:12:49 &#43;0200 CEST" itemprop="dateModified">
 
 <div class="article-metadata">
 
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/ana-dodik/">Ana Dodik</a></span>
+
+  </div>
   
   
 
@@ -429,10 +489,8 @@
     
     
       
-          Last updated on
-      
     
-    <time>Jul 10, 2019</time>
+    <time>April 2020</time>
   </span>
   
 
@@ -443,7 +501,7 @@
   
   
   <span class="middot-divider"></span>
-  <a href="/project/haunted-maze/#disqus_thread"></a>
+  <a href="/publication/sdmm-thesis/#disqus_thread"></a>
   
 
   
@@ -509,6 +567,45 @@
 
 
 
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://www.research-collection.ethz.ch/handle/20.500.11850/411118" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
 
 </div>
 
@@ -516,36 +613,52 @@
 
   <div class="article-container">
 
-    <div class="article-style" itemprop="articleBody">
-      <p>In May 2016, I decided to take the Microcontroller class at the TU Wien. We were supposed to implement a pretty simple labyrinth game, controlled using a Wiimote, for our first project. I sort of got carried away and made a Pac-Man clone. It also plays Lady Gaga.</p>
-<p>It’s controlled by kipping the Wiimote and the mazes are randomly generated (using the modified Prim’s algorithm as found on Wikipedia).</p>
-<p>Other things I implemented include:</p>
-<ul>
-<li>the GLCD driver,</li>
-<li>the hardware abstraction layer for the Wiimote Bluetooth,</li>
-<li>a random number generator which is fed using the ADC in differential mode to measure two High-Z pins,</li>
-<li>sending data from the SD-card to the MP3 module,</li>
-<li>more minor things (such as certain communication protocols).</li>
-</ul>
-<p><a href="https://github.com/demonFudgePies/HauntedMaze">Here is the code</a> for all of those who are interested. It was one of the more fun ways of being sleep deprived for almost a week.</p>
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract" itemprop="text">In this thesis, we develop a path-guiding method based on a probability distribution which we name the spatio-directional mixture model (SDMM). Our algorithm fits SDMMs to the 5- dimensional radiance distribution in an online manner and is capable of representing it as one continuous function. Our method does not require us to explicitly discretize the scene, princi- pally deals with outlier samples and allows us to sample the product of the radiance distribution and the material model. Furthermore, we present a new geometry-aware initialization scheme, as well as a way of accelerating the training speed. We analyze the impact of the different components of our algorithm, and demonstrate its effectiveness by comparing it to Practical Path Guiding (PPG) [MGN17]. Indeed, we show that our algorithm outperforms PPG on equal- sample comparisons.</p>
+    
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/6blMl0T1XUE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
+            
+            
+            <a href="/publication/#7">
+              Thesis
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
     </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">Master&rsquo;s thesis at ETH Zurich</div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"></div>
 
     
 
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tags/microcontroller/">microcontroller</a>
-  
-  <a class="badge badge-light" href="/tags/engineering/">engineering</a>
-  
-</div>
-
 
     
 
@@ -556,6 +669,10 @@
 
 
 
+  
+  
+    
+  
   
 
 
@@ -565,49 +682,12 @@
   
   <div class="media author-card" itemscope itemtype="http://schema.org/Person">
     
-      
-      <img class="portrait mr-3" src="/authors/admin/avatar_hue776a334b902d7828bf5c7a8aa11ccb3_202501_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
-    
 
     <div class="media-body">
-      <h5 class="card-title" itemprop="name"><a href="/authors/admin/">Ana Dodik</a></h5>
-      <h6 class="card-subtitle">Computer Vision Engineer</h6>
-      <p class="card-text" itemprop="description">My interests include computer graphics, computer vision, and machine learning.</p>
+      <h5 class="card-title" itemprop="name"><a href="/authors/ana-dodik/"></a></h5>
+      
+      
       <ul class="network-icon" aria-hidden="true">
-        
-          
-          
-          
-            
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a itemprop="sameAs" href="https://github.com/anadodik" target="_blank" rel="noopener">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-            
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a itemprop="sameAs" href="https://www.linkedin.com/in/ana-dodik-246bb0150" target="_blank" rel="noopener">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
         
       </ul>
     </div>
@@ -616,23 +696,8 @@
 
 
 
-    
-    
-
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-    
-
   </div>
-</article>
+</div>
 
 
 
