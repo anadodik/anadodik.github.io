@@ -1,117 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://anadodik.com/publication_types/7/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://anadodik.com/authors/ana-dodik/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://anadodik.com/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://anadodik.com/authors/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://anadodik.com/publication/prob-conns/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://anadodik.com/publication_types/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://anadodik.com/project/haunted-maze/</loc>
-    <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://anadodik.com/project/</loc>
-    <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://anadodik.com/tags/</loc>
-    <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://anadodik.com/tags/engineering/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://anadodik.com/project/haunted-maze/</loc>
+    <lastmod>2019-07-10T10:27:14+02:00</lastmod>
+  </url><url>
     <loc>https://anadodik.com/tags/microcontroller/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://anadodik.com/project/fairy-forest/</loc>
+  </url><url>
+    <loc>https://anadodik.com/project/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://anadodik.com/tags/opengl/</loc>
+  </url><url>
+    <loc>https://anadodik.com/tags/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://anadodik.com/tags/demo/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://anadodik.com/project/fairy-forest/</loc>
+    <lastmod>2019-07-10T10:27:14+02:00</lastmod>
+  </url><url>
     <loc>https://anadodik.com/tags/game/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://anadodik.com/tags/opengl/</loc>
+    <lastmod>2019-07-10T10:27:14+02:00</lastmod>
+  </url><url>
     <loc>https://anadodik.com/authors/admin/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://anadodik.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://anadodik.com/post/</loc>
     <lastmod>2019-05-06T17:54:11+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://anadodik.com/publication/</loc>
     <lastmod>2019-07-10T10:27:14+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://anadodik.com/talk/</loc>
     <lastmod>2019-05-06T17:54:11+01:00</lastmod>
   </url>
-  
 </urlset>

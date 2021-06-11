@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ana Dodik</title>
     <link>https://anadodik.com/</link>
     <description>Recent content on Ana Dodik</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2019, Ana Dodik. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 03 Sep 2017 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://anadodik.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 03 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://anadodik.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Implementing Probabilistic Connections for Bidirectional Path Tracing</title>
       <link>https://anadodik.com/publication/prob-conns/</link>
@@ -27,28 +23,7 @@
       <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://anadodik.com/project/haunted-maze/</guid>
-      <description>&lt;p&gt;In May 2016, I decided to take the Microcontroller class at the TU Wien. We were supposed to implement a pretty simple labyrinth game, controlled using a Wiimote, for our first project. I sort of got carried away and made a Pac-Man clone. It also plays Lady Gaga.&lt;/p&gt;
-
-&lt;p&gt;It’s controlled by kipping the Wiimote and the mazes are randomly generated (using the modified Prim’s algorithm as found on Wikipedia).&lt;/p&gt;
-
-&lt;p&gt;Other things I implemented include:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;the GLCD driver,&lt;/li&gt;
-&lt;li&gt;the hardware abstraction layer for the Wiimote Bluetooth,&lt;/li&gt;
-&lt;li&gt;a random number generator which is fed using the ADC in differential mode to measure two High-Z pins,&lt;/li&gt;
-&lt;li&gt;sending data from the SD-card to the MP3 module,&lt;/li&gt;
-&lt;li&gt;more minor things (such as certain communication protocols).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/demonFudgePies/HauntedMaze&#34; target=&#34;_blank&#34;&gt;Here is the code&lt;/a&gt; for all of those who are interested. It was one of the more fun ways of being sleep deprived for almost a week.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/6blMl0T1XUE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
+      <description>A WiiMote controlled Pac-Man clone on the Atmega1280 microcontroller.</description>
     </item>
     
     <item>
@@ -57,53 +32,7 @@
       <pubDate>Sat, 23 Jan 2016 00:00:00 +0100</pubDate>
       
       <guid>https://anadodik.com/project/fairy-forest/</guid>
-      <description>&lt;p&gt;A couple of semesters ago I decided to somewhat challenge myself. I took a class from the graduate program of Visual Computing at my university and decided to do it as a sort of a hobby project. This course has the students make a graphics demo, such as you would see in demoscene.&lt;/p&gt;
-
-&lt;p&gt;My idea was to make a magical forest with as many point lights flying around as possible. In the end I implemented the following effects:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Deferred Shading [1] in order to handle a lot of lights. I actually ended up using a hybrid approach, where I would use the spheres near the camera as stencils, and instanced rendering for everything else. This should theoretically minimize the amount of overdraw happening.&lt;/li&gt;
-&lt;li&gt;Two automatic Level of Detail techniques to  reduce the amount of polygons.
-
-&lt;ul&gt;
-&lt;li&gt;An edge collapse [2] algorithm would run on startup to decimate the objects and create varying levels of detail for an object. Obviously this isn’t something you would want to do in a game where all of the assets need to be loaded dynamically during gameplay, but since everything in my demo fits in a small amount of memory due to heavy instancing, it was no problem to load everything and wait for a little bit at startup.&lt;/li&gt;
-&lt;li&gt;Geometry shader billboarding [3] as the lowest resolution level of detail.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;A few post processing effects were also implemented:
-
-&lt;ul&gt;
-&lt;li&gt;Bloom [4]&lt;/li&gt;
-&lt;li&gt;HDR [5] for the fairies flying in the atmosphere.&lt;/li&gt;
-&lt;li&gt;Depth of Field [6] to focus mostly on the creatures in front of the camera.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Feel free to skip around through the video, it’s somewhat slow at the beginning.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/P03OPFNEO7M&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-&lt;p&gt;Definitely the most dificult part of the project was the sheer amount of work I had to do. These projects are usually done in pairs, but I had to do it myself since my partner decided to drop the course. I was, however, very excited about the project, and I can’t wait until I get to do something like this again.&lt;/p&gt;
-
-&lt;p&gt;Sources&lt;/p&gt;
-
-&lt;p&gt;[1] &lt;a href=&#34;http://ogldev.atspace.co.uk/www/tutorial35/tutorial35.html&#34; target=&#34;_blank&#34;&gt;Deferred Shading&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[2] &lt;a href=&#34;https://www.cg.tuwien.ac.at/courses/Realtime/slides/VU.WS.2014/11lods_acgr2005_short.pdf&#34; target=&#34;_blank&#34;&gt;Edge Collapse&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[3] &lt;a href=&#34;http://ogldev.atspace.co.uk/www/tutorial27/tutorial27.html&#34; target=&#34;_blank&#34;&gt;Geometry Shader Billboarding&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[4] &lt;a href=&#34;http://www.learnopengl.com/#!Advanced-Lighting/Bloom&#34; target=&#34;_blank&#34;&gt;Basic Bloom Effect&lt;/a&gt;, &lt;a href=&#34;http://kalogirou.net/2006/05/20/how-to-do-good-bloom-for-hdr-rendering/&#34; target=&#34;_blank&#34;&gt;Extension&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[5] &lt;a href=&#34;http://learnopengl.com/#!Advanced-Lighting/HDR&#34; target=&#34;_blank&#34;&gt;HDR&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[6] &lt;a href=&#34;https://en.wikibooks.org/wiki/OpenGL_Programming/Depth_of_Field&#34; target=&#34;_blank&#34;&gt;Depth of Field&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This was done for the Real Time Rendering course at the TU Wien.&lt;/p&gt;
-</description>
+      <description>A Real-Time 3D Graphics Demo</description>
     </item>
     
   </channel>

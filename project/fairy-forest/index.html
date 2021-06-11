@@ -81,7 +81,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.ec9debdaf8f4989e649628b64a85638a.css">
+  <link rel="stylesheet" href="/css/academic.min.deec45b62de79496b36fe708f187368c.css">
 
   
 
@@ -203,39 +203,6 @@
           <a class="nav-link " href="/#about">
             
             <span>Home</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#projects">
-            
-            <span>Projects</span>
             
           </a>
         </li>
@@ -555,50 +522,31 @@
 
     <div class="article-style" itemprop="articleBody">
       <p>A couple of semesters ago I decided to somewhat challenge myself. I took a class from the graduate program of Visual Computing at my university and decided to do it as a sort of a hobby project. This course has the students make a graphics demo, such as you would see in demoscene.</p>
-
 <p>My idea was to make a magical forest with as many point lights flying around as possible. In the end I implemented the following effects:</p>
-
 <ul>
 <li>Deferred Shading [1] in order to handle a lot of lights. I actually ended up using a hybrid approach, where I would use the spheres near the camera as stencils, and instanced rendering for everything else. This should theoretically minimize the amount of overdraw happening.</li>
-<li>Two automatic Level of Detail techniques to  reduce the amount of polygons.
-
-<ul>
+<li>Two automatic Level of Detail techniques to  reduce the amount of polygons.</li>
 <li>An edge collapse [2] algorithm would run on startup to decimate the objects and create varying levels of detail for an object. Obviously this isn’t something you would want to do in a game where all of the assets need to be loaded dynamically during gameplay, but since everything in my demo fits in a small amount of memory due to heavy instancing, it was no problem to load everything and wait for a little bit at startup.</li>
 <li>Geometry shader billboarding [3] as the lowest resolution level of detail.</li>
-</ul></li>
-<li>A few post processing effects were also implemented:
-
-<ul>
+<li>A few post processing effects were also implemented:</li>
 <li>Bloom [4]</li>
 <li>HDR [5] for the fairies flying in the atmosphere.</li>
 <li>Depth of Field [6] to focus mostly on the creatures in front of the camera.</li>
-</ul></li>
 </ul>
-
 <p>Feel free to skip around through the video, it’s somewhat slow at the beginning.</p>
 
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/P03OPFNEO7M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/P03OPFNEO7M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
 <p>Definitely the most dificult part of the project was the sheer amount of work I had to do. These projects are usually done in pairs, but I had to do it myself since my partner decided to drop the course. I was, however, very excited about the project, and I can’t wait until I get to do something like this again.</p>
-
 <p>Sources</p>
-
-<p>[1] <a href="http://ogldev.atspace.co.uk/www/tutorial35/tutorial35.html" target="_blank">Deferred Shading</a></p>
-
-<p>[2] <a href="https://www.cg.tuwien.ac.at/courses/Realtime/slides/VU.WS.2014/11lods_acgr2005_short.pdf" target="_blank">Edge Collapse</a></p>
-
-<p>[3] <a href="http://ogldev.atspace.co.uk/www/tutorial27/tutorial27.html" target="_blank">Geometry Shader Billboarding</a></p>
-
-<p>[4] <a href="http://www.learnopengl.com/#!Advanced-Lighting/Bloom" target="_blank">Basic Bloom Effect</a>, <a href="http://kalogirou.net/2006/05/20/how-to-do-good-bloom-for-hdr-rendering/" target="_blank">Extension</a></p>
-
-<p>[5] <a href="http://learnopengl.com/#!Advanced-Lighting/HDR" target="_blank">HDR</a></p>
-
-<p>[6] <a href="https://en.wikibooks.org/wiki/OpenGL_Programming/Depth_of_Field" target="_blank">Depth of Field</a></p>
-
+<p>[1] <a href="http://ogldev.atspace.co.uk/www/tutorial35/tutorial35.html">Deferred Shading</a></p>
+<p>[2] <a href="https://www.cg.tuwien.ac.at/courses/Realtime/slides/VU.WS.2014/11lods_acgr2005_short.pdf">Edge Collapse</a></p>
+<p>[3] <a href="http://ogldev.atspace.co.uk/www/tutorial27/tutorial27.html">Geometry Shader Billboarding</a></p>
+<p>[4] <a href="http://www.learnopengl.com/#!Advanced-Lighting/Bloom">Basic Bloom Effect</a>, <a href="http://kalogirou.net/2006/05/20/how-to-do-good-bloom-for-hdr-rendering/">Extension</a></p>
+<p>[5] <a href="http://learnopengl.com/#!Advanced-Lighting/HDR">HDR</a></p>
+<p>[6] <a href="https://en.wikibooks.org/wiki/OpenGL_Programming/Depth_of_Field">Depth of Field</a></p>
 <p>This was done for the Real Time Rendering course at the TU Wien.</p>
 
     </div>
@@ -642,8 +590,8 @@
 
     <div class="media-body">
       <h5 class="card-title" itemprop="name"><a href="/authors/admin/">Ana Dodik</a></h5>
-      <h6 class="card-subtitle">MSc Student</h6>
-      <p class="card-text" itemprop="description">My research interests include light transport simulation, machine learning and computer vision.</p>
+      <h6 class="card-subtitle">Computer Vision Engineer</h6>
+      <p class="card-text" itemprop="description">My interests include computer graphics, computer vision, and machine learning.</p>
       <ul class="network-icon" aria-hidden="true">
         
           
@@ -712,7 +660,7 @@
   
 
   <p class="powered-by">
-    Copyright &copy; 2019, Ana Dodik. All rights reserved. &middot; 
+    Copyright © 2019, Ana Dodik. All rights reserved. &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
@@ -861,7 +809,7 @@
     
     
     
-    <script src="/js/academic.min.a634eb963f72ae9bd331e70f2b1bc2d8.js"></script>
+    <script src="/js/academic.min.ea4d3f9d470eca0ae38c4485e7942a0e.js"></script>
 
   </body>
 </html>
