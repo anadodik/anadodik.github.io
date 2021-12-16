@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thomas Müller on Ana Dodik</title>
+    <link>https://anadodik.com/authors/thomas-m%C3%BCller/</link>
+    <description>Recent content in Thomas Müller on Ana Dodik</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; 2019, Ana Dodik. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anadodik.com/authors/thomas-m%C3%BCller/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Path Guiding Using a Spatio-Directional Mixture Model</title>
+      <link>https://anadodik.com/publication/sdmm-paper/</link>
+      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://anadodik.com/publication/sdmm-paper/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
