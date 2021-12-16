@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neural Control Variates: Rendering Results">
+    <title>Bedroom</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../utils/report.css">
+
+    <script src="./data.js"></script>
+
+    <script src="../../utils/react.js"></script>
+    <script src="../../utils/react-dom.js"></script>
+    <script src="../../utils/ImageBox.js"></script>
+    <script src="../../utils/Chart.js"></script>
+    <script src="../../utils/ChartBox.js"></script>
+    <script src="../../utils/TableBox.js"></script>
+    <script src="../../utils/CopyrightBox.js"></script>
+    <script src="../../utils/jeri.js"></script>
+</head>
+
+<script type="text/javascript">
+
+    function setup() {
+        var local = true;
+
+        content = document.getElementById("content");
+        var box = document.getElementById('image-box');
+
+        var help = document.createElement('div');
+        var helpText = "Use mouse wheel to zoom in/out, click and drag to pan. Press keys [1], [2], ... to switch between individual images.";
+        if (!local) {
+            helpText += " Press [?] to see more keybindings.";
+        }
+        help.appendChild(document.createTextNode(helpText));
+        help.className = "help";
+        box.appendChild(help);
+
+        if (local) {
+            new ImageBox(content, data['imageBoxes'] );
+        } else {
+            var jeri = document.createElement('div');
+            jeri.className = "jeri";
+            var viewer = Jeri.renderViewer(jeri, data["jeri"]);
+            box.appendChild(jeri);
+
+            viewer.setState({ activeRow: 1 });
+            
+            content.appendChild(box);
+        }
+        
+        new ChartBox(content, data["stats"]);
+        new TableBox(content, "Metrics", data["stats"]);
+        
+        new CopyrightBox(content, "(c) the authors" );
+    }
+</script>
+
+<body onload="setup();">
+    <div class="content scene-content" id="content">
+        <div class="image-box" id="image-box">
+            <h1 class="title">Bedroom</h1>
+            <div class="help"></div>
+        </div>
+    </div>
+</body>
+</html>

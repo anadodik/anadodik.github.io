@@ -75,13 +75,13 @@
 
   
   
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
   
 
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.deec45b62de79496b36fe708f187368c.css">
+  <link rel="stylesheet" href="/css/academic.min.a695da0a2278c8b68b79cd9b221ea83f.css">
 
   
 
@@ -309,6 +309,9 @@
         
         
       
+        
+        
+      
 
       <div class="form-row mb-4">
         <div class="col-auto">
@@ -319,6 +322,10 @@
           <select class="pub-filters pubtype-select form-control form-control-sm" data-filter-group="pubtype">
             <option value="*">Type</option>
             
+            
+            <option value=".pubtype-2">
+              Journal article
+            </option>
             
             <option value=".pubtype-7">
               Thesis
@@ -332,6 +339,10 @@
             
             
             
+            <option value=".year-2021">
+              2021
+            </option>
+            
             <option value=".year-2020">
               2020
             </option>
@@ -342,6 +353,235 @@
       </div>
 
       <div id="container-publications">
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2021">
+          
+            
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple" itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+  
+    
+
+
+
+<meta content="2021-12-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2021-12-14 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/ana-dodik/">Ana Dodik</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>December 2021</time>
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      CGF
+    
+  </span>
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+</div>
+
+  
+
+  
+  
+  
+  
+  <a href="/publication/sdmm-paper/">
+      <img src="/publication/sdmm-paper/featured_huafbfa2e78d66f2b594d7dc8ed2c36d8e_130309_918x517_fill_q90_lanczos_smart1_2.png" class="article-banner" itemprop="image" alt="">
+  </a>
+  
+
+  <h3 class="article-title mb-1 mt-3" itemprop="name">
+    <a href="/publication/sdmm-paper/" itemprop="url">Path Guiding Using a Spatio-Directional Mixture Model</a>
+  </h3>
+
+  
+  <div class="article-style" itemprop="articleBody">
+    We propose a learning-based method for light-path construction in path tracing algorithms, which iteratively optimizes and samples from what we refer to as spatio-directional Gaussian mixture models (SDMMs). In particular, we approximate incident radiance as an online-trained 5D mixture that is accelerated by a kD-tree. Using the same framework, we approximate BSDFs as pre-trained nD mixtures, where n is the number of BSDF parameters. Such an approach addresses two major challenges in path-guiding models. First, the 5D radiance representation naturally captures correlation between the spatial and directional dimensions. Such correlations are present in e.g. parallax and caustics. Second, by using a tangent-space parameterization of Gaussians, our spatio-directional mixtures can perform approximate product sampling with arbitrarily oriented BSDFs. Existing models are only able to do this by either foregoing anisotropy of the mixture components or by representing the radiance field in local (normal aligned) coordinates, which both make the radiance field more difficult to learn. An additional benefit of the tangent-space parameterization is that each individual Gaussian is mapped to the solid sphere with low distortion near its center of mass. Our method performs especially well on scenes with small, localized luminaires that induce high spatio-directional correlation in the incident radiance.
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/abs/2111.13094" target="_blank" rel="noopener">
+  Preprint
+</a>
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/pdf/2111.13094.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/sdmm-paper/cite.bib">
+  Cite
+</button>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://github.com/anadodik/sdmm-mitsuba" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="/publication/sdmm-paper/sdmm-video.mp4" target="_blank" rel="noopener">
+  Video
+</a>
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://onlinelibrary.wiley.com/doi/10.1111/cgf.14428" target="_blank" rel="noopener">
+    
+    Publisher's Version
+  </a>
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    
+      
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="/publication/sdmm-paper/website/index.html" >
+    
+    Interactive Website
+  </a>
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fcgf.14428&amp;file=cgf14428-sup-0001-SuppMat.pdf" target="_blank" rel="noopener">
+    
+    Supplementary Material
+  </a>
+
+
+  </div>
+  
+
+</div>
+
+          
+        </div>
+
         
 
         
@@ -416,9 +656,6 @@
   
 
   
-  
-  <span class="middot-divider"></span>
-  <a href="/publication/sdmm-thesis/#disqus_thread"></a>
   
 
   
@@ -586,8 +823,6 @@
 
     
     
-    
-    <script id="dsq-count-scr" src="//anadodik.disqus.com/count.js" async></script>
     
 
     

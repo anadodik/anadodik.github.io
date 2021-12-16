@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Path Guiding using Spatio-Directional Mixture Models: Rendering Results">
+    <title>Path Guiding using Spatio-Directional Mixture Models</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="utils/report.css">
+</head>
+
+<body>
+    <div class="content" id="content">
+        <h1 class="title">Path Guiding using Spatio-Directional Mixture Models: Rendering Results</h1>
+        <p class="authors">Ana Dodik, Marios Papas, Cengiz Öztireli, Thomas Müller</p>
+
+        <h2>Abstract</h2>
+        <p>
+            We propose a learning-based method for
+            light-path construction in path tracing algorithms, which iteratively optimizes and samples from
+            what we refer to as spatio-directional Gaussian mixture models (SDMMs).
+            In particular, we approximate incident radiance as an online-trained 5D mixture that is accelerated by a kD-tree.
+            Using the same framework, we approximate BSDFs as pre-trained nD mixtures, where n is the number of BSDF parameters.
+            Such an approach addresses two major challenges in path-guiding models.
+            First, the 5D radiance representation naturally captures correlation between the spatial and directional dimensions.
+            Such correlations are present in e.g. parallax and caustics.
+            Second, by using a tangent-space parameterization of Gaussians, our spatio-directional mixtures can perform approximate product sampling with arbitrarily oriented BSDFs.
+            Existing models are only able to do this by either foregoing anisotropy of the mixture components or by representing the radiance field in local (normal aligned) coordinates, which both make the radiance field more difficult to learn.
+            An additional benefit of the tangent-space parameterization is that each individual Gaussian is mapped to the solid sphere with low distortion near its center of mass.
+            Our method performs especially well on scenes with small, localized luminaires that induce high spatio-directional correlation in the incident radiance.
+        </p>
+
+        <div class="element-container">
+            <!-- <div class="report-preview">
+                <a href="scenes/art-room/index.html"><img class="report-thumb" src="scenes/art-room/thumb.jpg"></a><br />
+                Art Room
+            </div> -->
+            <!-- <div class="report-preview">
+                <a href="scenes/bathroom/index.html"><img class="report-thumb" src="scenes/bathroom/thumb.jpg"></a><br />
+                Salle De Bain
+            </div> -->
+            <div class="report-preview">
+                <a href="scenes/glossy-bathroom/index.html"><img class="report-thumb" src="scenes/glossy-bathroom/thumb.jpg"></a><br />
+                Bathroom
+            </div>
+            <div class="report-preview">
+                <a href="scenes/bedroom/index.html"><img class="report-thumb" src="scenes/bedroom/thumb.jpg"></a><br />
+                Bedroom
+            </div>
+            <div class="report-preview">
+                <a href="scenes/bookshelf/index.html"><img class="report-thumb" src="scenes/bookshelf/thumb.jpg"></a><br />
+                Bookshelf
+            </div>
+            <div class="report-preview">
+                <a href="scenes/bottle/index.html"><img class="report-thumb" src="scenes/bottle/thumb.jpg"></a><br />
+                Bottle
+            </div>
+            <div class="report-preview">
+                <a href="scenes/glossy-kitchen/index.html"><img class="report-thumb" src="scenes/glossy-kitchen/thumb.jpg"></a><br />
+                Glossy Kitchen
+            </div>
+            <!-- <div class="report-preview">
+                <a href="scenes/kitchen/index.html"><img class="report-thumb" src="scenes/kitchen/thumb.jpg"></a><br />
+                Country Kitchen
+            </div> -->
+            <div class="report-preview">
+                <a href="scenes/necklace/index.html"><img class="report-thumb" src="scenes/necklace/thumb.jpg"></a><br />
+                Necklace
+            </div>
+            <!-- <div class="report-preview">
+                <a href="scenes/spaceship/index.html"><img class="report-thumb" src="scenes/spaceship/thumb.jpg"></a><br />
+                Spaceship
+            </div> -->
+            <!-- <div class="report-preview">
+                <a href="scenes/sponza/index.html"><img class="report-thumb" src="scenes/sponza/thumb.jpg"></a><br />
+                Sponza Atrium
+            </div> -->
+            <!-- <div class="report-preview">
+                <a href="scenes/crytek-sponza/index.html"><img class="report-thumb" src="scenes/crytek-sponza/thumb.jpg"></a><br />
+                Crytek Sponza
+            </div> -->
+            <div class="report-preview">
+                <a href="scenes/pool/index.html"><img class="report-thumb" src="scenes/pool/thumb.jpg"></a><br />
+                Swimming Pool
+            </div>
+            <!-- <div class="report-preview">
+                <a href="scenes/staircase/index.html"><img class="report-thumb" src="scenes/staircase/thumb.jpg"></a><br />
+                Staircase
+            </div> -->
+            <div class="report-preview">
+                <a href="scenes/torus/index.html"><img class="report-thumb" src="scenes/torus/thumb.jpg"></a><br />
+                Torus
+            </div>
+            <div class="report-preview">
+                <a href="scenes/veach-door/index.html"><img class="report-thumb" src="scenes/veach-door/thumb.jpg"></a><br />
+                Veach Door
+            </div>
+            <!-- <div class="report-preview">
+                <a href="scenes/veach-lamp/index.html"><img class="report-thumb" src="scenes/veach-lamp/thumb.jpg"></a><br />
+                Veach Lamp
+            </div> -->
+            <!-- <div class="report-preview">
+                <a href="scenes/cbox/index.html"><img class="report-thumb" src="scenes/cbox/thumb.jpg"></a><br />
+                Indirectly Lit Cornell Box
+            </div> -->
+            <div class="report-preview">
+                <a href="scenes/water-caustic/index.html"><img class="report-thumb" src="scenes/water-caustic/thumb.jpg"></a><br />
+                Water Caustic
+            </div>
+            <div class="report-preview">
+                <a href="scenes/cornell-box/index.html"><img class="report-thumb" src="scenes/cornell-box/thumb.jpg"></a><br />
+                Cornell Box
+            </div>
+            <div class="report-preview">
+                <a href="scenes/glossy-cbox/index.html"><img class="report-thumb" src="scenes/glossy-cbox/thumb.jpg"></a><br />
+                Glossy Cornell Box
+            </div>
+        </div>
+    </div>
+</body>
+</html>
