@@ -274,9 +274,15 @@ h1 {
 
 @media screen and (min-width: 450px) and (max-width: 850px) {
 	#main {
-		width: 100%;
+		width: calc(100% - 20px);
 		margin: 0 auto;
 		padding: 10px;
+	}
+	
+	#header {
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
 	}
 
 	#title, #nav, #content-left, #footer {
@@ -304,9 +310,9 @@ h1 {
 
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 350px) and (max-width: 450px) {
 	#main {
-		width: 100%;
+		width: calc(100% - 20px);
 		margin: 0 auto;
 	}
 
@@ -318,6 +324,7 @@ h1 {
 
 	#header img {
 		margin: auto 1rem auto auto;
+		width: 9em;
 	}
 
 	#header h1 {
@@ -351,4 +358,58 @@ h1 {
 		font-size: 1em;
 	}
 
+}
+
+@media screen and (max-width: 350px) {
+	#main {
+		width: calc(100% - 20px);
+		margin: 0 auto;
+	}
+
+	#header {
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+	}
+
+	#header img {
+		margin: auto 1rem auto auto;
+		width: 6em;
+	}
+
+	#header h1 {
+		font-size: 2rem;
+		margin-right: 0px;
+
+	}
+
+	#icons {
+		font-size: 1em;
+		margin-top: 0rem;
+	}
+
+	#intro {
+		padding: 0px 0.3rem 0px 0px;
+		margin-top: 0.5rem;
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+
+	#title, #nav, #content-left, #footer {
+		display: block;
+		width: 100%;
+	}
+
+	#nav {
+		font-size: 1.3rem;
+		padding-bottom: 0.5em;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+
+	h3 {
+		font-size: 1em;
+	}
 }
