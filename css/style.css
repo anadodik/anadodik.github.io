@@ -312,8 +312,9 @@ h1 {
 
 @media screen and (min-width: 350px) and (max-width: 450px) {
 	#main {
-		width: calc(100% - 20px);
+		width: calc(100% - 5px);
 		margin: 0 auto;
+		padding: 5px;
 	}
 
 	#header {
@@ -324,7 +325,7 @@ h1 {
 
 	#header img {
 		margin: auto 1rem auto auto;
-		width: 9em;
+		width: 8em;
 	}
 
 	#header h1 {
