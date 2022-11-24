@@ -29,6 +29,7 @@ a:hover	{
 
 #main {
 	width: var(--width);
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -271,12 +272,11 @@ h1 {
     color: var(--white);
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (min-width: 450px) and (max-width: 850px) {
 	#main {
-		width: auto;
+		width: 100%;
 		margin: 0 auto;
 		padding: 10px;
-        font-family: 'Roboto Serif', serif;
 	}
 
 	#title, #nav, #content-left, #footer {
@@ -304,11 +304,33 @@ h1 {
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
 	#main {
-		width: auto;
+		width: 100%;
 		margin: 0 auto;
-		padding: 10px;
+	}
+
+	#header {
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+	}
+
+	#header img {
+		margin: auto 1rem auto auto;
+	}
+
+	#header h1 {
+		font-size: 2.5rem;
+		margin-right: 0px;
+	}
+
+	#icons {
+		font-size: 1.4em;
+	}
+
+	#intro {
+		padding: 0px 0.3rem 0px 0px;
 	}
 
 	#title, #nav, #content-left, #footer {
