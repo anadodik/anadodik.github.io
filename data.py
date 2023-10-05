@@ -59,6 +59,7 @@ class Publication:
     authors: list[str]
     venue: str
     resources: dict[str, str]
+    featured_image: str
 
 
 @dataclass(kw_only=True, slots=True)
@@ -117,6 +118,22 @@ PERSON = Person(
 
 PUBLICATIONS = [
     Publication(
+        title="Variational Barycentric Coordinates",
+        nickname="vbc",
+        authors=["Ana Dodik", "Oded Stein", "Vincent Sitzmann", "Justin Solomon"],
+        year="2023",
+        venue="SIGGRAPH Asia (Journal Track)",
+        resources={
+            "paper": "publication/vbc/vbc.pdf",
+            "arXiv": "#",
+            "supplementary": "publication/vbc/supplemental.zip",
+            # "website": "https://gender-in-graphics.github.io/",
+            # "talk": "https://youtu.be/GOn3-P6KZ9E",
+            # "bibtex": "publication/gender-in-graphics/dodiksellan2022gender.bib",
+        },
+        featured_image="featured.webp",
+    ),
+    Publication(
         title="Sex and Gender in the Computer Graphics Research Literature",
         nickname="gender-in-graphics",
         authors=["Ana Dodik*", "Silvia Sellán*", "Theodore Kim", "Amanda Phillips", "(*joint first authors)"],
@@ -129,6 +146,7 @@ PUBLICATIONS = [
             "talk": "https://youtu.be/GOn3-P6KZ9E",
             "bibtex": "publication/gender-in-graphics/dodiksellan2022gender.bib",
         },
+        featured_image="featured.png",
     ),
     Publication(
         title="Path Guiding Using A Spatio-Directional Mixture Model",
@@ -146,6 +164,7 @@ PUBLICATIONS = [
             "video": "publication/sdmm-paper/sdmm-video.mp4",
             "interactive": "publication/sdmm-paper/website/index.html",
         },
+        featured_image="featured.png",
     ),
 ]
 

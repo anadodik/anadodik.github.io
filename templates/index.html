@@ -41,15 +41,17 @@
 		<div id="nav">
       <a href="#news">News</a>
       · <a href="#publications">Publications</a>
-      <!-- · <a href="">Blog</a> · -->
+      <!-- · <a href="">Media</a> -->
       <!-- · <a href="#">CV</a> -->
     </div>
 
 		<div id="news" class="content-left middle-section">
       <!-- <h2>News</h2> -->
         <ul>
+          <li> <b>Variational Barycentric Coordinates accepted to SIGGRAPH Asia!</b> <i>on Sep 13 2023</i></li>
+          <li> <b>Gave a talk at the <a href="http://www.geometrie.tugraz.at/events/og2023.html">Geometry Workshop in <s>Obergurgl</s> Innsbruck 2023</a> </b> <i>on Aug 28 2023</i></li>
           <li> <b>I will be presenting at the Queer in AI workshop at NeurIPS 2022.</b> <i>on Nov 28 2022</i></li>
-          <li> <b>New website is live!</b> <i>on Nov 23 2022</i></li>
+          <!-- <li> <b>New website is live!</b> <i>on Nov 23 2022</i></li> -->
           <li> <b>I gave a guest lecture at UNC.</b> <i>on Nov 22 2022</i> 
           <li> <b>I was awarded MIT's Presidential Fellowship and will start my PhD in July 2022.</b> <i>on Mar 24 2022</i></li>
         </ul>
@@ -60,7 +62,7 @@
       {% for publication in publications %}
       <div id="publication">
         <div id="publication-image">
-          <img src="publication/{{ publication.nickname }}/featured.png" alt="Featured image from {{ publication.title }}.">
+          <img src="publication/{{ publication.nickname }}/{{ publication.featured_image }}" alt="Featured image from {{ publication.title }}.">
         </div>
         <div id="publication-content">
           <div id="publication-header">
@@ -73,13 +75,19 @@
           </div>
           <div id="publication-links">
             {% for resource_name, resource_link in publication.resources.items() %}
-              <div id="publication-link"><a href="{{ resource_link }}"><i class="{{ resource_icons[resource_name] }}"></i> {{ resource_readable_names[resource_name] }} </a></div>
+              <div id="publication-link"><a {{ 'type="text/plain"' if resource_name == 'bibtex' else '' }} href="{{ resource_link }}"><i class="{{ resource_icons[resource_name] }}"></i> {{ resource_readable_names[resource_name] }} </a></div>
             {% endfor %}
           </div>
         </div>
       </div>
       {% endfor %}
 		</div>
+    <!-- <div id="media" class="content-left">
+      <h2>Media</h2>
+    </div> -->
+    <!-- <div id="patents" class="content-left">
+      <h2>Patents</h2>
+    </div> -->
     <div id="footer"><p> © 2022 Ana Dodik </p></div>
 	  </div>
   </body>

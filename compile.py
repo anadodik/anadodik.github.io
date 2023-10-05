@@ -4,6 +4,7 @@ from data import PERSON, INTRO, PUBLICATIONS
 
 RESOURCE_ICONS = {
     "paper": "fa-solid fa-file-pdf",
+    "arXiv": "ai ai-arxiv ai-5x ai-border ai-inverse",
     "supplementary": "fa-solid fa-file-pdf",
     "code": "fa-solid fa-code",
     "thesis": "fa-solid fa-file-pdf",
@@ -17,6 +18,7 @@ RESOURCE_ICONS = {
 
 RESOURCE_READABLE_NAMES = {
     "paper": "Paper",
+    "arXiv": "arXiv",
     "supplementary": "Supplementary",
     "code": "Code",
     "thesis": "Thesis",

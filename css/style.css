@@ -212,11 +212,12 @@ h1 {
     width: var(--img-size);
     /* border-radius: 5%; */
 	/* margin: auto 2em auto auto; */
-    filter: drop-shadow(3px 3px 4px var(--very-dark-gray));
+    /* filter: drop-shadow(3px 3px 4px var(--very-dark-gray)); */
+    filter: drop-shadow(2px 2px 3px var(--very-dark-gray));
 }
 
 #publication-content {
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 #post i	{
