@@ -75,7 +75,7 @@
           </div>
           <div id="publication-links">
             {% for resource_name, resource_link in publication.resources.items() %}
-              <div id="publication-link"><a {{ 'type="text/plain"' if resource_name == 'bibtex' else '' }} href="{{ resource_link }}"><i class="{{ resource_icons[resource_name] }}"></i> {{ resource_readable_names[resource_name] }} </a></div>
+              <div id="publication-link"><a {{ 'type="text/plain"' if resource_name == 'bibtex' else '' }} href="/{{ resource_link }}"><i class="{{ resource_icons[resource_name] }}"></i> {{ resource_readable_names[resource_name] }} </a></div>
             {% endfor %}
           </div>
         </div>

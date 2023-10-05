@@ -1,10 +1,46 @@
+@font-face {
+    font-family: 'Linux Libertine'; /* normal */
+    src: url('fonts/linux-libertine/LinLibertine_R.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Linux Biolinum'; /* normal */
+    src: url('fonts/linux-libertine/LinBiolinum_R.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Linux Libertine'; /* italic */
+    src: url('fonts/linux-libertine/LinLibertine_RI.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Linux Libertine'; /* bold */
+    src: url('fonts/linux-libertine/LinLibertine_RB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Linux Libertine'; /* bold */
+    src: url('fonts/linux-libertine/LinLibertine_RBI.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
 :root {
     --red: #9d2235;
     --very-dark-gray: #3e4040;
+	--darker-gray: #585858;
     --dark-gray: #898d8d;
     --gray: #c7c9c7;
     --white: #ffffff;
-    --width: 60%;
+    --width: 65%;
     --flew-wrap-margin: 0.5rem;
 	--img-size: 10em;
 }  
@@ -76,7 +112,7 @@ a:hover	{
 
 #header{
 	text-align:left;
-	margin: 1em 4em 1em 4em;
+	margin: 2em 4em 1em 4em;
     display: flex;
     align-items: flex-start;
     font-family: 'Roboto Serif', serif;
@@ -102,11 +138,67 @@ a:hover	{
     flex-direction: row;
     justify-content: flex-start;
     align-items: baseline;
-    /* text-align: center; */
-    /* vertical-align: middle; */
     flex-wrap: wrap;
     margin-top: calc(-1 * var(--flew-wrap-margin));
 }
+
+
+#paper-header{
+	text-align:left;
+	/* margin: 1em 4em 1em 4em; */
+	margin: 2em 4em 0em 0em;
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Roboto Serif', serif;
+}
+
+#paper-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+	width: 100%;
+    text-align: left;
+    /* vertical-align: middle; */
+    /* flex-wrap: wrap; */
+	white-space: wrap;
+	margin: 0 0 0;
+    margin-top: calc(-1 * var(--flew-wrap-margin));
+}
+
+#authors {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+	width: 100%;
+	font-family: 'Linux Biolinum';
+	font-size: 1.3rem;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#authors p {
+	color: var(--darker-gray);
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+#authors a {
+	color: var(--darker-gray);
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+#authors a:hover {
+	text-decoration: underline;
+    color: var(--red);
+}
+
+#abstract, #teaser-image, #BibTeX {
+	color: var(--darker-gray);
+}
+
 
 h1 {
     font-family: 'Roboto', sans-serif;
@@ -138,6 +230,7 @@ h1 {
 #intro {
     margin-top: 1rem;
     margin-bottom: 0;
+	color: var(--very-dark-gray);
 }
 
 #content-left a:link, #content-left a:visited	{
@@ -271,6 +364,22 @@ h1 {
 	text-decoration: none;
     background-color: var(--red);
     color: var(--white);
+}
+
+#bibtex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+	margin-bottom: 2.5rem;
+	width: 100%;
+	background-color: #f1f1f1;
+	color: #000000;
+	padding: 10px;
+	padding-left: 15px;
+	border-radius: 10px;
+    border-color: var(--red);
+    border-style: solid;
 }
 
 @media screen and (min-width: 450px) and (max-width: 850px) {
