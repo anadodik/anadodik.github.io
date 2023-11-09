@@ -86,11 +86,13 @@ class Service:
 BIOGRAPHY = """
 Ana Dodik is a PhD student and Presidential Fellow at MIT CSAIL working on neural representations for geometry processing together with Justin Solomon and Vincent Sitzmann.
 
-Prior to joining MIT, she spent two years developing next-generation virtual presence at Meta. She graduated with a Master’s degree from ETH Zurich, where she spent a year collaborating with Disney Research Studios on problems at the intersection of machine learning and offline rendering.
+Prior to joining MIT, she spent two years developing next-generation virtual presence at Meta. She graduated with a Master's degree from ETH Zurich, where she spent a year collaborating with Disney Research Studios on problems at the intersection of machine learning and offline rendering.
 """
 
 INTRO = """
-I am a PhD student at <b>MIT CSAIL</b> working on <b>geometry processing</b> with <i>Justin Solomon</i> and <i>Vincent Sitzmann</i>.
+I am a PhD student at MIT CSAIL working on geometry processing, advised by Prof. Justin Solomon and Prof. Vincent Sitzmann.
+</p> <p>
+Before MIT, I was a computer vision engineer at Meta. I have a Master's degree from ETH Zurich. While there, I had the amazing opportunity to work with Disney Research Studios on path tracing research.
 """
 
 INTERESTS = [
