@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 2</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 2</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Ana Dodik</strong> — <em>anadodik@mit.edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: Visualizing exclusionary zoning</h2>
+
+			This dataset represents the geographic, demographic and zoning information of different municipalities of the Boston Metropolitan Area. 
+			The residential zones of each municipality are grouped into single-family, and non-single family zones.
+			Therefore, there are at most two entries per municipality in the database.
+			For each municipality, we are also given the percentage of residential land that is dedicated to single family housing.
+			For each zoning group are given demographic data: race, binarized gender, age group, and income bracket per household.
+			We are also given aggregate statistics on how many people live in a household and whether they are a family or not.
+			
+			<h3>Overall Analysis Questions</h3>
+
+			<ol>
+				<li>
+					How does wealth distribution relate to living in single family areas? 
+					Are rich people more likely to live in those areas? 
+					My assumption is that rich people have the monetary incentive to prevent single-family areas from being up-zoned.
+				</li>
+				<li>
+					Do single-family zones actually house single families?
+					Needing a roommate likely correlates with lower income.
+					Assuming no class-segregation, we would expect as many roommates in single-family zones as in non-single family zones.
+					Which zones are more likely to house roommates?
+					Are single family zones another way to class-segretate society? 
+				</li>
+				<li>
+					The G.I. Bill from 1944 famously allowed for discrimination against black people when it came to home purchases.
+					This prevented black people from moving to predominantly white suburbs.
+					Combined with other discriminatory practices, such as jim crow laws and redlining, racial segregation remains strong.
+					Does it show up in this dataset? Are single-family zoned suburbs still segregated?
+				</li>
+				<li>
+					What are the age demographics of the single-family zones?
+					Baby-boomers hold most of the economic power in the country,
+					and would therefore logically be the most likely to be able to afford to live in a single-family house.
+				</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discoveries & Insights</h2>
+
+			
+			Immediately it became obvious that some of the fields are per-zone and some per-municipality.
+			For example, naively computing <code>SUM(%single family)</code> results in values that go up to 200% if we're aggregating per municipality.
+			Therefore if we are plotting things per municipality, <code>AVG</code> is the more appropriate operator.
+			With that in mind, we can visualize the percent of single-family housing in each municipality.
+			<figure>
+				<img style="max-width:100%;" src="./images/Where_are_the_single_family_zones.png" alt="" />
+				<figcaption>
+				The more deep-blue a value is, the more single-family zoned area there is in the municipality.
+				I am a bit surprised by this: I would have expected the single-family zones to be suburbs, i.e. the furthest from the city.
+				Reflecting on the distance of these suburbs, it might make sense because areas like Newton are still suburbs but within driving distance from Boston.
+				</figcaption>
+			</figure>
+
+			Time to move onto my question 1: are single-family zoned areas rich.
+			For this purpose I will define "rich" as income over $200k per household, even though that is far from rich according to Boston's living standards.
+			However, this is the best we can do with the data given.
+			We can also create two groups in Tableau based on the <code>Only Single Family</code> attribute.
+			<figure>
+				<img style="max-width:100%;" src="./images/Are_Single_Family_Areas_Rich_1.png" alt="" />
+				<figcaption>
+				Here we have performed two simple dot plots and overlayed a box-and-whiskers plot.
+				The x-axis represents the percentage of people with income over $200k and is shared between the plots.
+				The top plot shows non single family zones and the bottom plot shows single family zones.
+				There really does appear to be a discrepancy between the two, but there is some definite uncertainty in there.
+				Note: I made the dot-plot horizontal instead of the default vertical, because then the box-and-whiskers plot looks like a highlighter with the correct color choice.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img style="max-width:100%;" src="./images/Are_Single_Family_Areas_Rich_2.png" alt="" />
+				<figcaption>
+				Here we've included color to encode the percentage of single-family zoned area in a municipality.
+				This reveals a really interesting trend!
+				For those living in a single family zoned neighborhood, 
+				if their neighborhood is predominantly single-family zoned, they are more likely to be rich.
+				</figcaption>
+			</figure>
+			
+			This poses the question, are there discrepancies within municipalities. 
+			E.g. if we take a look at a municipality which has both single family zoned areas and not single-family zoned areas, 
+			how do the incomes compare?
+			<figure>
+				<img style="max-width:100%;" src="./images/Are_Single_Family_Areas_Rich_3.png" alt="" />
+				<figcaption>
+				Hand-picking a couple of municipalities which I've noticed appear in both, and there seems to be a trend.
+				Does this trens hold in general? We should check this more rigorously.
+				</figcaption>
+			</figure>
+			
+			We can make this more general by creating a filter in Tableau.
+			<figure>
+				<img style="max-width:100%;" src="./images/Are_Single_Family_Areas_Rich_4.png" alt="" />
+				<figcaption>
+				The trend really does seem to hold in general!
+				For single-family zoned municipalities, it seems they cannot be at the same time rich and have a small percentage of single-family zoned housing.
+				It seems there is a definite correlation between single-family housing and rich people.
+				</figcaption>
+			</figure>
+
+			We can represent this as a bar chart and sort by sum number of people with income over $200k.
+			<figure>
+				<img style="max-width:100%;" src="./images/Are_Single_Family_Areas_Rich_5.png" alt="" />
+				<figcaption>
+				This visualization seems very cluttered.
+				A good idea might be to either separate them into groups like in previous plots, or to simply plot the difference between the single-family and non-single-family and sort that.
+				I will leave this for future work as it doesn't seem like it would add anything particular.
+				</figcaption>
+			</figure>
+
+			We can draw multiple conclusions from this.
+			One would be that living in a single-family housing somehow incentivizes everyone in it to become rich.
+			This is highly unlikely.
+			Another is that it is necessary to be rich to be able to afford living in such a neighborhood.
+			This would imply that there are entire neighborhoods of Boston that are completely class-segregated.
+			Why is our society okay with class-based segregation, but is appalled by race-based segregation?
+
+			Regardless, let's move onto question 2: race.
+			We can start by visualizing where non-white vs. white people live.
+			<figure>
+				<img style="max-width:100%;" src="./images/Where_Do_White_People_Live.png" alt="" />
+				<figcaption>
+					Percent of the population that is non-white.
+					The color map seems to be chosen such that white represents the percentage of the white population.
+					Comparing it to Figure 1, nothing seems to immediately pop out.
+					Maybe a choropleth is the wrong visualization.
+				</figcaption>
+			</figure>
+
+			In the end, we are trying to find a correlation between race and preference for single-family zoned housing.
+			Scatter-plots are usually good at showing correlations: we can try plotting the percentage of a given race vs. the percentage of single-family area.
+			
+			<figure>
+				<img style="max-width:100%;" src="./images/Where_Do_White_People_Live_2.png" alt="" />
+				<figcaption>
+				Again, this is not particularly revealing to me.
+				</figcaption>
+			</figure>
+
+			We will try again the visualization from Figure 4.
+			<figure>
+				<img style="max-width:100%;" src="./images/Where_Do_White_People_Live_4.png" alt="" />
+				<figcaption>
+					Plotting the percentage of non-white to white people on the x-axis, and separating the residential zones into two groups, we can see a definite pattern.
+					The single family zones are clustered much more highly to the right, indicating a lower variance in the population.
+					There is also definitely something to be said about the box-and-whiskers plot deciding non-white areas are outliers in our data :)
+				</figcaption>
+			</figure>
+
+			We can now try combining the visualizations from Figure 4 the last figure.
+			What if we combine zoning, income, and race?
+			<figure>
+				<img style="max-width:100%;" src="./images/Where_Do_White_People_Live_3.png" alt="" />
+				<figcaption>
+				We plot the percentage of rich people on the shared x-axis, like in Figure 4.
+				However, unlike Figure 4, the colormap here indicates the percentage of non-white people.
+				Not only are single-family zoned areas richer, it seems that, the richer and more single-family an area is, the less likely it is to be non-white.
+				</figcaption>
+			</figure>
+			
+			We proceed to our last quesiton.
+			There is a financially dominant group in the United States of America, the baby boomers.
+			If we expect single-family zoning to be a class and race issue, we would expect to see them over-represented in single-family zones.
+			We will simply repeat the same analysis on as with non-white people.
+			<figure>
+				<img style="max-width:100%;" src="./images/Where_Do_Old_People_Live_1.png" alt="" />
+				<figcaption>
+					We plot a choropleth of the percentage of the 65+ population.
+					The colorscale is chosen such that white (the color of gray hair) indicates a higher population of older people.
+				</figcaption>
+			</figure>
+
+			Again, the choropleth is not very revealing.
+			<figure>
+				<img style="max-width:100%;" src="./images/Where_Do_Old_People_Live_3.png" alt="" />
+				<img style="max-width:100%;" src="./images/Where_Do_Old_People_Live_2.png" alt="" />
+				<figcaption>
+					The top Figure plots the percentage of people with that are 65+ on the x-axis, and the same value in color.
+					The bottom Figure plots the percentage of rich people on the x-axis, but retains the age demographics data in the color.
+					Again we see a similar correlation between high-income single-family areas, and an aging population.
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+
+			<p>
+				In summary, I learned that a choropleth might not be a super useful visualization for the type of analysis I am trying to perform.
+				I found it extremely useful to separate out the data into groups and to encode things in both the position and color dimensions.
+				Regarding the data itself, it seems to confirm my original hypothesis.
+				The people living in single-family zones are more often higher-income, white, and over 65+.
+				Certainly, this is a population with a lot of privilege and power in our society.
+				Lastly, what I presented here was insightflu, but still a very surface-level analysis.
+				For example, it will be necessary to analyze other income brackets as well.
+			</p>
+		</section>
+	</main>
+</body>
+</html>
