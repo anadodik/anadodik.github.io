@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 4</small>
+			Persuasive or Deceptive Visualization?
+		</h1>
+
+		<p>
+			<strong>Ana Dodik</strong> — <em>anadodik@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+    <h2>Proposition: regardless of the ethnicity of the member of service, NYPD has a disproportionate number of complaints from black people.</h2>
+
+		<section>
+      <h3>FOR the Proposition</h3>
+
+      <figure>
+				<img style="max-width:100%;" src="Ernest.png" alt="" />
+				<figcaption>
+					Percentage of incidents grouped by the ethnicity of the member of service in NYC.
+					The percentage of incidents reported by black people is higher than any other individual ethnicity,
+					regardless of the ethnicity of the NYPD member of service.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>
+					The most important decision in both the visualizations is over what dimension the data is normalized.
+					In this visualization, I opted for a visualization that is more directly related to the proposition:
+					first I separated the data into groups based on the MOS ethnicity, and then plotted the percentage
+					of complaints from different complaintant ethnicities <i>within</i> each MOS ethnicity. 
+					Earnestness score: 2.
+				</li>
+				<li>
+					Within each plot, I decided to put the largest group at the top because our eyes culturally start at the top and move down.
+					That group is black people and it clearly stands out as the largest group in each category.
+					I considered separating the plots into individual bar charts, but because it is percentages and
+					because I wanted the majority group to stand out, this seemed like the most succinct form.
+					I am lowering the earnestness score on this one because I manually reordered the data to make a point instead of
+					sorting it alphabetically or going with a random ordering.
+					Earnestness score: 1.5.
+				</li>
+				<li>
+					The caption of the rows is intentionally wordy as a way of giving the reader more information, and therefore trust in the visualization.
+					On one hand, what I wrote down is true, but I did write it down intentionally trying project the image of trustworthyness.
+					Earnestness score: 1.5.
+				</li>
+			</ul>
+    </section>
+
+    <section>
+      <h3>AGAINST the Proposition</h3>
+
+      <figure>
+		<img style="max-width:100%;" src="Deceptive.png" alt="" />
+				<figcaption>
+          			NYPD officers are significantly more likely to have more complaints if they are white, regardless of the race of the complaintant.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>
+					As mentioned, the major difference between the visualizations is normalization.
+					Within each ethnicity complaintant ethnicity, white MOS have more complaints.
+					Therefore, black people are affected <i>more</i> by white NYPD MOS,
+					seemingly contradicting the initial statement.
+					Of course, this is likely because there are simply more white MOS in the NYPD,
+					but that information is not actually available in our dataset.
+					We would have to collect additional data or rely on priors about the world to know that.
+					Our dataset only contains information on the <i>number of complaints per MOS ethnicity</i>.
+					If there is an equal number of MOS of each ethnicity, this visualization would be perfectly earnest.
+					Earnestness score: -0.5.
+				</li>
+				<li>
+					The visualization is intentionally busy for two reasons: 
+					it makes it seem more trustworthy because it seems like more science has been done,
+					while simultaneously making it harder to reason about deeply.
+					Earnestness score: -1.5.
+				</li>
+				<li>
+					The label on the bottom was made intentionally more vague than in the first visualization.
+					I considered making it say "Percentage Incidents (Normalized within Complaintant Ethnicity)",
+					but felt like that would make the faults in the visualization more obvious.
+					Earnestness score: -2.0.
+				</li>
+			</ul>
+    </section>
+
+    <section>
+      <h2>Final Reflection</h2>
+
+      <p>
+		I found it interesting that I used the same data for both visualizations and made it say very different things,
+		just by using different statistical tools and flipping axes around.
+		Even my Tableau formulas used were nearly identical!
+		I wonder which visualization I would have come up with if I had to make just one, and if
+		I did not already have a preconcieved notion of what I was expecting to see.
+		This assignment really shines a new light on the statement "just follow the data", which we so often see online.
+	  </p>
+
+	  <p>
+		More interestingly, I would argue that both visualizations might be considered earnest if this dataset is all we know about.
+		If someone with no prior knowledge on the NYPD looked at the second visualization, they might conclude that it is reasonably earnest.
+		There is also something to be said about the connection between cognitive load and earnestness.
+		I am someone who works  with data and statistics, and I feel like it would take me some time to notice what the problem with the second visualization is.
+		It is possible that someone with less training or someone looking to justify their bias would be more likely to just accept the visualization for what it is.
+	  </p>
+    </section>
+	</main>
+</body>
+</html>
