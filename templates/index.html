@@ -58,7 +58,10 @@
 		<div id="news" class="content-left middle-section">
       <!-- <h2>News</h2> -->
         <ul>
-          <li> <b>Invited talk at the Brown Visual Computing Seminar on May 3rd. Send me a message if you want to chat!</b> <i>on May 3 2024</i></li>
+          <li> <b>Invited panelist on ethics in generative AI at the MIT AI Film Hack.</b> <i>on Feb 16 2025</i></li>
+          <li> <b>Invited talk at the University of Chicago.</b> <i>on Oct 8 2024</i></li>
+          <li> <b>Awarded the Mathworks Fellowship.</b> <i>on Jun 28 2024</i></li>
+          <li> <b>Invited talk at the Brown Visual Computing Seminar.</b> <i>on May 3 2024</i></li>
           <li> <b>Talk at MIT's Visual Computing Seminar</b> <i>on Apr 16 2024</i></li>
           <li> <b>Variational Barycentric Coordinates accepted to SIGGRAPH Asia!</b> <i>on Sep 13 2023</i></li>
           <li> <b>Gave a talk at the <a href="http://www.geometrie.tugraz.at/events/og2023.html">Geometry Workshop in <s>Obergurgl</s> Innsbruck 2023</a> </b> <i>on Aug 28 2023</i></li>
@@ -87,7 +90,7 @@
           </div>
           <div id="publication-links">
             {% for resource_name, resource_link in publication.resources.items() %}
-              <div id="publication-link"><a {{ 'type="text/plain"' if resource_name == 'bibtex' else '' }} href="/{{ resource_link }}"><i class="{{ resource_icons[resource_name] }}"></i> {{ resource_readable_names[resource_name] }} </a></div>
+              <div id="publication-link"><a {{ 'type="text/plain"' if resource_name == 'bibtex' else '' }} href="{{ resource_link }}"><i class="{{ resource_icons[resource_name] }}"></i> {{ resource_readable_names[resource_name] }} </a></div>
             {% endfor %}
           </div>
         </div>

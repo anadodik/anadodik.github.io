@@ -1,6 +1,6 @@
 from jinja2 import Environment, FileSystemLoader
 
-from data import PERSON, INTRO, PUBLICATIONS, AFFILIATION
+from data import PERSON, INTRO, PUBLICATIONS
 
 RESOURCE_ICONS = {
     "paper": "fa-solid fa-file-pdf",
