@@ -1,34 +1,34 @@
 @font-face {
     font-family: 'Linux Libertine'; /* normal */
-    src: url('fonts/linux-libertine/LinLibertine_R.woff') format('woff');
+    src: url('fonts/LinLibertine_R.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Linux Biolinum'; /* normal */
-    src: url('fonts/linux-libertine/LinBiolinum_R.woff') format('woff');
+    src: url('fonts/LinBiolinum_R.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Linux Libertine'; /* italic */
-    src: url('fonts/linux-libertine/LinLibertine_RI.woff') format('woff');
+    src: url('fonts/LinLibertine_RI.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Linux Libertine'; /* bold */
-    src: url('fonts/linux-libertine/LinLibertine_RB.woff') format('woff');
+    src: url('fonts/LinLibertine_RB.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Linux Libertine'; /* bold */
-    src: url('fonts/linux-libertine/LinLibertine_RBI.woff') format('woff');
+    src: url('fonts/LinLibertine_RBI.woff') format('woff');
     font-weight: bold;
     font-style: italic;
 }
