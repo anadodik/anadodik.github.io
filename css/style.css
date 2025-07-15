@@ -146,7 +146,7 @@ a:hover	{
 #paper-header{
 	text-align:left;
 	/* margin: 1em 4em 1em 4em; */
-	margin: 2em 4em 0em 0em;
+	margin: 2em 0em 1em 0em;
     display: flex;
     align-items: flex-start;
     font-family: 'Roboto Serif', serif;
@@ -158,12 +158,26 @@ a:hover	{
     justify-content: flex-start;
     align-items: baseline;
 	width: 100%;
-    text-align: left;
+	text-wrap: wrap;
+    text-align: center;
     /* vertical-align: middle; */
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
 	white-space: wrap;
-	margin: 0 0 0;
+	margin: 0 0 0 0;
     margin-top: calc(-1 * var(--flew-wrap-margin));
+}
+
+
+#paper-title h1 {
+    font-family: 'Roboto', sans-serif;
+    margin: var(--flew-wrap-margin) 0rem 0rem 0rem;
+    font-weight: 100;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: var(--red);
+    white-space: wrap;
+    vertical-align: baseline;
+    /* display: inline-block; */
 }
 
 #authors {
@@ -172,15 +186,16 @@ a:hover	{
     justify-content: flex-start;
     align-items: baseline;
 	width: 100%;
-	font-family: 'Linux Biolinum';
-	font-size: 1.3rem;
+	font-family: 'Linux Libertine';
+	font-size: 1.1rem;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
 #authors p {
 	color: var(--darker-gray);
-    margin-top: 5px;
+	width: 100%;
+    margin-top: 3px;
     margin-bottom: 0px;
 }
 
@@ -195,8 +210,59 @@ a:hover	{
     color: var(--red);
 }
 
-#abstract, #teaser-image, #BibTeX {
+#teaser-image {
 	color: var(--darker-gray);
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+	text-align: justify;
+    white-space: wrap;
+    vertical-align: baseline;
+    display: inline-block;
+	width: 100%;
+}
+
+#caption {
+	color: var(--darker-gray);
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+	text-align: justify;
+    white-space: wrap;
+    vertical-align: baseline;
+    display: inline-block;
+	width: 100%;
+}
+
+#abstract h2 {
+	color: var(--red);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+
+	width: 100%;
+	font-family: Roboto, sans-serif;
+	font-weight: 200;
+	/* font-size: 1.5rem; */
+	/* margin-top: 20px; */
+	/* margin-bottom: 20px; */
+	text-align: justify;
+}
+
+#abstract p {
+	color: var(--darker-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+
+	width: 100%;
+	font-family: 'Linux Libertine';
+	/* font-size: 1.5rem; */
+	/* margin-top: 20px; */
+	/* margin-bottom: 20px; */
+	text-align: justify;
 }
 
 
@@ -341,6 +407,7 @@ h1 {
     flex-wrap: wrap;
     vertical-align: middle;
     color: var(--dark-gray);
+	box-sizing: border-box;
 }
 
 #publication-links a, #publication-links a:link, #publication-links a:visited {
@@ -409,17 +476,24 @@ h1 {
     color: var(--white);
 }
 
+#BibTeX {
+	color: var(--darker-gray);
+	box-sizing: border-box;
+	margin-bottom: 0px;
+}
+
 #bibtex {
     display: flex;
     flex-direction: row;
+	text-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-	margin-bottom: 2.5rem;
+	margin-bottom: 0rem;
 	width: 100%;
 	background-color: #f1f1f1;
 	color: #000000;
-	padding: 10px;
-	padding-left: 15px;
+	padding: 15px;
+	box-sizing: border-box;
 	border-radius: 10px;
     border-color: var(--red);
     border-style: solid;
@@ -511,59 +585,93 @@ h1 {
 	h3 {
 		font-size: 1em;
 	}
-
 }
 
-@media screen and (max-width: 350px) {
+/* All smaller screens get this: */
+@media screen and (max-width: 850px) {
 	#main {
-		width: calc(100% - 20px);
-		margin: 0 auto;
+		width: calc(100% - 5px);
+		margin: 0;
 	}
 
-	#header {
-		margin-left: 0px;
-		margin-right: 0px;
+	#paper-title {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		text-align: center;
+		margin: 0 0 0 0;
+	}
+
+	#paper-title h1 {
+		font-weight: 300;
+		vertical-align: baseline;
+	}
+
+	#authors {
+		justify-content: center;
+		text-align: center;
+	}
+
+	#publication-links-pubpage a, #publication-links-pubpage a:link, #publication-links-pubpage a:visited {
+		margin-right: 2px;
+		margin-bottom: 2px;
+		border-width: 2px;
+	}
+
+	#bibtex {
+		font-size: 80%;
+	}
+}
+
+@media screen and (min-width: 650px) and (max-width: 850px) {
+	#paper-title h1 {
+		font-size: 2rem;
+		line-height: 2.2rem;
+	}
+
+	#authors {
+		font-size: 1rem;
+	}
+
+	#publication-links-pubpage a, #publication-links-pubpage a:link, #publication-links-pubpage a:visited {
+		padding: 0.2em 0.8em 0.2em 0.8em;
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (min-width: 450px) and (max-width: 650px) {
+	#paper-title h1 {
+		font-size: 2rem;
+		line-height: 2.2rem;
+	}
+
+	#authors {
+		font-size: 1rem;
+	}
+
+	#publication-links-pubpage a, #publication-links-pubpage a:link, #publication-links-pubpage a:visited {
+		padding: 0.05em 0.65em 0.05em 0.65em;
+		font-size: 0.9em;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	#paper-title h1 {
+		font-size: 1.4rem;
+		line-height: 1.6rem;
+	}
+	#authors {
+		font-size: 0.9rem;
+		margin-top: 0px;
+	}
+	#authors p {
 		margin-top: 0px;
 	}
 
-	#header img {
-		margin: auto 1rem auto auto;
-		width: 6em;
-	}
-
-	#header h1 {
-		font-size: 2rem;
-		margin-right: 0px;
-
-	}
-
-	#icons {
-		font-size: 1em;
-		margin-top: 0rem;
-	}
-
-	#intro {
-		padding: 0px 0.3rem 0px 0px;
-		margin-top: 0.5rem;
-		font-size: 0.8rem;
-		line-height: 1rem;
-	}
-
-	#title, #nav, #content-left, #footer {
-		display: block;
-		width: 100%;
-	}
-
-	#nav {
-		font-size: 1.3rem;
-		padding-bottom: 0.5em;
-	}
-
-	h2 {
-		font-size: 2em;
-	}
-
-	h3 {
-		font-size: 1em;
+	#publication-links-pubpage a, #publication-links-pubpage a:link, #publication-links-pubpage a:visited {
+		padding: 0.1em 0.65em 0.1em 0.65em;
+		font-size: 0.7em;
+		border-width: 1px;
 	}
 }

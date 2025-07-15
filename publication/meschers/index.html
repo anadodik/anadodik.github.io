@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Meschers: Geometry Processing of Impossible Objects</title>
+    <meta charset="utf-8">
+    <link href="../../css/style.css" type="text/css" rel="stylesheet">
+    </link>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,400;8..144,600&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,300;0,8..144,400;0,8..144,600;1,8..144,100;1,8..144,300;1,8..144,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <meta content="Meschers: Geometry Processing of Impossible Objects" name="description">
+    </meta>
+    <meta content="Ana Dodik" name="author">
+    </meta>
+    <meta content="Copyright 2023 Ana Dodik. All rights reserved." name="copyright">
+    </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function readFile(filePath) {
+            var result = null;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", filePath, false);
+            xmlhttp.send();
+            if (xmlhttp.status == 200) {
+                result = xmlhttp.responseText;
+            }
+            return result;
+        }
+        function scrollIntoBibtex() {
+            var bibtexContainer = document.getElementById("bibtex");
+            console.log(bibtexContainer);
+            bibtexContainer.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+                inline: "nearest"
+            });
+        }
+
+        window.onload = () => {
+            document.getElementById("bibtex-code").innerHTML = readFile("meschers.bib");
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="paper-header">
+            <div id="paper-title">
+                <h1> Meschers: Geometry Processing of Impossible Objects </h1>
+            </div>
+        </div>
+        <div id="authors">
+            <p><a href="https://anadodik.github.io">ANA DODIK</a>, MIT CSAIL</p>
+            <p><a href="https://yukaryote.github.io/">ISABELLA YU</a>, MIT CSAIL</p>
+            <p><a href="https://cs.stanford.edu/~kach/">KARTIK CHANDRA</a>, MIT CSAIL</p>
+            <p><a href="https://people.csail.mit.edu/jrk/">JONATHAN RAGAN-KELLEY</a>, MIT CSAIL</p>
+            <p><a href="https://web.mit.edu/cocosci/josh.html">JOSHUA TENENBAUM</a>, MIT BCS</p>
+            <p><a href="https://www.vincentsitzmann.com/">VINCENT SITZMANN</a>, MIT CSAIL</p>
+            <p><a href="https://people.csail.mit.edu/jsolomon/">JUSTIN SOLOMON</a>, MIT CSAIL</p>
+        </div>
+        
+        <div id="publication-links-pubpage" class="content-left">
+            <div id="publication-link"><a  href="/publication/meschers/Meschers.pdf"><i class="fa-solid fa-file-pdf"></i> Paper </a></div>
+            <div id="publication-link"><a  href="/publication/vbc/supplemental.zip"><i class="fa-solid fa-file-video"></i> Supplemental Video </a></div>
+            <div id="publication-link"><a  href="javascript:;"><i class="fa-solid fa-file-code"></i> Code (Soon!) </a></div>
+            <div id="publication-link"><a href="javascript:scrollIntoBibtex();"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
+        </div>
+        <div id="teaser-image" class="content-left middle-section">
+            <img src="bagel.png" alt="The Impossibagel" style="width: 100%;">
+            <p> 
+                Fig. 1.
+                The mescher is a geometry representation that allows rendering and relighting impossible objects (left), 
+                as well as performing intrinsic geometry processing operations like heat diffusion (center) 
+                and geodesic distance queries (right). 
+            </p>
+        </div>
+
+        <div id="abstract" class="content-left middle-section">
+            <h2>Abstract</h2>
+
+            <p>
+                Impossible objects, geometric constructions that humans can perceive but that cannot exist in real life, have been a topic of intrigue in visual arts, perception, and graphics, yet no satisfying computer representation of such objects exists.
+            </p>
+            <p>
+                Previous work embeds impossible objects in 3D, cutting them or twisting/bending them in the depth axis.
+                Cutting an impossible object changes its local geometry at the cut, which can hamper downstream graphics applications, such as smoothing, while bending makes it difficult to relight the object.
+                Both of these can invalidate geometry operations, such as distance computation.
+                
+            </p>
+            <p>
+                As an alternative, we introduce meschers, meshes capable of representing impossible constructions akin to those found in M.C. Escher's woodcuts.
+                Our representation has a theoretical foundation in discrete exterior calculus and supports the use-cases above, as we demonstrate in a number of example applications.
+                Moreover, because we can do discrete geometry processing on our representation, we can inverse-render impossible objects.
+                We also compare our representation to cut and bend representations of impossible objects.
+            </p>
+        </div>
+
+        <video controls width="100%" autoplay loop muted class="content-left middle-section">
+            <source src="/publication/meschers/meschers_fast_forward.mp4" type="video/mp4" />
+        </video>
+
+
+        <div id="abstract" class="content-left middle-section">
+            <h2>The Anatomy of A Mescher</h2>
+
+            <p>
+                <span>
+                    Impossible objects are integrable only <i>locally</i> but not <i>globally</i>.
+                    In plain English, this means that if we cover a corner of an impossible object with a sheet of paper, 
+                    the visible part of it begins to look possible!
+                    Building on this insight, we construct a specialized mesh representation for Escheresque constructions.
+                </span>
+            </p>
+            <p>
+                <span>
+                    Unlike a typical mesh, which stores per-vertex 3D positions, 
+                    a mescher stores per-vertex 2D screen-space positions and a <i>per-edge depth difference</i>.
+                    Whereas differences in depth across edges must sum up to zero as we travel around 
+                    a standard mesh, this is not necessarily the case for a mescher.
+                    It is a mathematical way of describing the perceptual impossibility.
+                </span>
+            </p>
+            <video controls width="100%" autoplay loop muted class="content-left">
+                <source src="/publication/meschers/meschers_data_structure.mp4" type="video/mp4" />
+            </video>
+            <p>
+                <span>
+                    While the meschers model promises to shed light on human visual perception,
+                    from a computer graphics perspective it imporantly allows us to
+                    assemble intrinsic geometry operators such as a Laplacian!
+                </span>
+            </p>
+            <h2>Applications</h2>
+            <p>
+                <span>
+                    We can now perform many standard geometry processing operations on meschers,
+                    such as mesh smoothing.
+                </span>
+            </p>
+            <video controls width="100%" autoplay loop muted class="content-left">
+                <source src="/publication/meschers/heart.mp4" type="video/mp4" />
+            </video>
+            <div class="caption">
+                Fig 2. Laplacian smoothing of the per-vertex 2D positions of a mescher (left), 
+                per-edge depth differences (center), or both (right).
+            </div>
+            <p>
+                <span>
+                    Excitingly, we can also use inverse rendering to deform a possible
+                    torus to match a target image of an impossible triangle.
+                    As the paper demonstrates, the impossibility in the optimized 
+                    result is real and measurable.
+                </span>
+            </p>
+            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; text-align: center;">
+                <video controls width="50%" autoplay loop muted>
+                    <source src="/publication/meschers/inverse.mp4" type="video/mp4" />
+                </video>
+                <div style="width: 50%; height: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center">
+                    <img src="Penrose-dreieck.png" style="width:60%;height:60%"/>
+                    <p>
+                        <span style="text-align: center; width: 100%; font-size: 1.5rem;">
+                        Target Image
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="BibTeX" style="width:100%;" class="content-left">
+            <h2>BibTeX</h2>
+            <pre id="bibtex">
+            <code id="bibtex-code" "background-color: #f1f1f1;">
+                <!-- <embed type="text/plain" style="width: 100%;background-color:white" src="vbc.bib"> -->
+            </code>
+        </pre>
+        </div>
+        <div id="abstract" class="content-left">
+            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; text-align: center;">
+                <div style="width: 50%; height: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center">
+                    <img src="csail_logo.svg" style="width:60%;height:60%"/>
+                </div>
+                <div style="width: 50%; height: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center">
+                    <img src="gdp.png" style="width:40%;height:40%"/>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p> © 2022 Ana Dodik </p>
+        </div>
+    </div>
+</body>
+
+</html>
