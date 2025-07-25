@@ -118,11 +118,18 @@ a:hover	{
     font-family: 'Roboto Serif', serif;
 }
 
+#header #face-container {
+	margin: auto 2em auto auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
 
 #header img {
     width: 10em;
     border-radius: 50%;
-	margin: auto 2em auto auto;
 }
 
 #title {

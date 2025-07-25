@@ -32,24 +32,26 @@
   <body>
 	<div id="main">
 		<div id="header">
-      <img src="face_cropped.jpeg" alt="Picture of Ana"/>
+      <div id="face-container">
+        <img src="face_cropped.jpeg" alt="Picture of Ana"/>
+        <div id="icons">
+          <a href="mailto:anadodik@mit.edu"><i id="icon" class="fa-solid fa-envelope"></i></a> ·
+          <a href="https://twitter.com/ana_dodik"><i id="icon" class="fa-brands fa-twitter"></i></a> ·
+          <a href="https://github.com/anadodik"><i id="icon" class="fa-brands fa-github"></i></a> ·
+          <a href="https://scholar.google.com/citations?user=cDmCKFcAAAAJ&sortby=pubdate"><i id="icon" class="ai ai-google-scholar"></i></a> ·
+          <a href="https://www.linkedin.com/in/ana-dodik-246bb0150/"><i id="icon" class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
       <div id="title">
         <div id="name-and-contact">
-          <h1> Ana Dodik </h1>
-          <div id="icons">
-            <a href="mailto:anadodik@mit.edu"><i id="icon" class="fa-solid fa-envelope"></i></a> ·
-            <a href="https://twitter.com/ana_dodik"><i id="icon" class="fa-brands fa-twitter"></i></a> ·
-            <a href="https://github.com/anadodik"><i id="icon" class="fa-brands fa-github"></i></a> ·
-            <a href="https://scholar.google.com/citations?user=cDmCKFcAAAAJ&sortby=pubdate"><i id="icon" class="ai ai-google-scholar"></i></a> ·
-            <a href="https://www.linkedin.com/in/ana-dodik-246bb0150/"><i id="icon" class="fa-brands fa-linkedin"></i></a>
-          </div>
+          <h1> Ana Dodik | <span style="font-size: 2.5rem;">Graphics & Society</span></h1> 
         </div>
-        <p id="intro"> 
-Second-year PhD student at MIT <a href="https://www.eecs.mit.edu/">EECS</a>, <a href="https://www.csail.mit.edu/">CSAIL</a> advised by Prof. Justin Solomon and Prof. Vincent Sitzmann.
-Working on problems at the intersection of graphics, vision, and algorithmic fairness.
-</p><p>
-Before MIT, I was a computer vision engineer at Meta. I have a Master's degree from ETH Zurich where I had the amazing opportunity to work with Disney Research Studios on path tracing research.
- </p>
+        <p id="intro">
+          I work on untangling how graphics impacts and is impacted by humans, namely its relationship to perception, interaction, and societal motivators and outcomes.  PhD student, MIT <a href="https://www.csail.mit.edu/">CSAIL</a>, <a href="https://www.eecs.mit.edu/">EECS</a>.
+        </p>
+        <p>
+          I am advised by Prof. Justin Solomon and Prof. Vincent Sitzmann. Before MIT, I was a computer vision engineer at Meta. I have a Master's degree from ETH Zurich where I had the amazing opportunity to work with Disney Research Studios on path tracing research.
+        </p>
       </div>
     </div>
 
@@ -63,9 +65,14 @@ Before MIT, I was a computer vision engineer at Meta. I have a Master's degree f
 		<div id="news" class="content-left middle-section">
       <!-- <h2>News</h2> -->
         <ul>
-          <li> <b>Currently supported by the Mathworks Fellowship.</b> <i>since Jun 28 2024</i></li>
+          <li> <b>Invited panelist at WiGRAPH lunch!</b> <i>on Aug 13 2025</i></li>
+          <li> <b>Join our "Countering Racial Bias in Computer Graphics" BoF at SIGGRAPH!</b> <i>on Aug 12 2025</i></li>
+          <li> <b>Meschers to be presented at SIGGRAPH 2025!</b> <i>on Aug 11 2025</i></li>
+          <li> <b>Talk at Dartmouth College.</b> <i>on Jul 17 2025</i></li>
           <li> <b>Invited panelist on ethics in generative AI at the MIT AI Film Hack.</b> <i>on Feb 16 2025</i></li>
+          </br>
           <li> <b>Invited talk at the University of Chicago.</b> <i>on Oct 8 2024</i></li>
+          <li> <b>Supported by the Mathworks Fellowship.</b> <i>Jun 28 2024</i></li>
           <li> <b>Invited talk at the Brown Visual Computing Seminar.</b> <i>on May 3 2024</i></li>
           <li> <b>Talk at MIT's Visual Computing Seminar</b> <i>on Apr 16 2024</i></li>
           <li> <b>Variational Barycentric Coordinates accepted to SIGGRAPH Asia!</b> <i>on Sep 13 2023</i></li>
@@ -79,6 +86,30 @@ Before MIT, I was a computer vision engineer at Meta. I have a Master's degree f
 
 		<div id="publications" class="content-left">
       <h2>Publications</h2>
+      <div id="publication">
+        <div id="publication-image">
+          <img src="publication/meschers/featured.webp" alt="Featured image from Meschers.">
+        </div>
+        <div id="publication-content">
+          <div id="publication-header">
+            <a href="/publication/meschers">
+              <h3> Meschers: Geometry Processing of Impossible Objects </h3>
+            </a>
+            <i> Ana Dodik, Isabella Yu, Kartik Chandra, Jonathan Ragan-Kelley, Joshua Tenenbaum, Vincent Sitzmann, Justin Solomon  </i>
+            <br/>
+            <p><b>SIGGRAPH (Journal Track), 2025 </b></p>
+          </div>
+          <div id="publication-links">
+            
+              <div id="publication-link"><a  href="/publication/meschers/Meschers.pdf"><i class="fa-solid fa-file-pdf"></i> Paper </a></div>
+            
+              <div id="publication-link"><a  href="/publication/meschers/supplemental.mp4"><i class="fa-solid fa-file-video"></i> Supplemental </a></div>
+            
+              <div id="publication-link"><a type="text/plain" href="/publication/meschers/meschers.bib"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
+            
+          </div>
+        </div>
+      </div>
       
       <div id="publication">
         <div id="publication-image">
@@ -97,7 +128,7 @@ Before MIT, I was a computer vision engineer at Meta. I have a Master's degree f
             
               <div id="publication-link"><a  href="/publication/vbc/vbc.pdf"><i class="fa-solid fa-file-pdf"></i> Paper </a></div>
             
-              <div id="publication-link"><a  href="/publication/vbc/supplemental.zip"><i class="fa-solid fa-file-pdf"></i> Supplementary </a></div>
+              <div id="publication-link"><a  href="/publication/vbc/supplemental.zip"><i class="fa-solid fa-file-pdf"></i> Supplemental </a></div>
             
               <div id="publication-link"><a type="text/plain" href="/publication/vbc/vbc.bib"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
             
@@ -126,7 +157,7 @@ Before MIT, I was a computer vision engineer at Meta. I have a Master's degree f
             
               <div id="publication-link"><a  href="https://youtu.be/GOn3-P6KZ9E"><i class="fa-solid fa-video"></i> Talk </a></div>
             
-              <div id="publication-link"><a  href="/publication/gender-in-graphics/gender-as-a-variable-supplement.pdf"><i class="fa-solid fa-file-pdf"></i> Supplementary </a></div>
+              <div id="publication-link"><a  href="/publication/gender-in-graphics/gender-as-a-variable-supplement.pdf"><i class="fa-solid fa-file-pdf"></i> Supplemental </a></div>
             
               <div id="publication-link"><a type="text/plain" href="/publication/gender-in-graphics/dodiksellan2022gender.bib"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
             
@@ -155,7 +186,7 @@ Before MIT, I was a computer vision engineer at Meta. I have a Master's degree f
             
               <div id="publication-link"><a  href="https://youtu.be/7D2r6K4rrqA?t=1774"><i class="fa-solid fa-video"></i> Talk </a></div>
             
-              <div id="publication-link"><a  href="/publication/sdmm-paper/sdmm-paper-suppl.pdf"><i class="fa-solid fa-file-pdf"></i> Supplementary </a></div>
+              <div id="publication-link"><a  href="/publication/sdmm-paper/sdmm-paper-suppl.pdf"><i class="fa-solid fa-file-pdf"></i> Supplemental </a></div>
             
               <div id="publication-link"><a  href="/publication/sdmm-paper/sdmm-video.mp4"><i class="fa-solid fa-video"></i> Video </a></div>
             
