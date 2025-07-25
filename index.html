@@ -9,6 +9,22 @@
       gtag('js', new Date());
 
       gtag('config', 'G-9365R38FRY');
+      window.onload = () => {
+        const collapseButton = document.getElementById('collapse');
+        const items = document.querySelectorAll('.collapsable');
+        let expanded = false;
+
+        collapseButton.addEventListener('click', () => {
+          expanded = !expanded;
+          items.forEach(item => {
+            item.style.display = expanded ? 'list-item' : 'none';
+          });
+          collapseButton.innerHTML = expanded
+            ? '<i class="fa fa-chevron-up" aria-hidden="true"></i>'
+            : '<i class="fa fa-chevron-down" aria-hidden="true"></i>';
+          collapseButton.setAttribute('aria-label', expanded ? 'Collapse News' : 'Expand News');
+        });
+      }
     </script>
 
     <title>Ana Dodik</title>
@@ -70,18 +86,20 @@
           <li> <b>Meschers to be presented at SIGGRAPH 2025!</b> <i>on Aug 11 2025</i></li>
           <li> <b>Talk at Dartmouth College.</b> <i>on Jul 17 2025</i></li>
           <li> <b>Invited panelist on ethics in generative AI at the MIT AI Film Hack.</b> <i>on Feb 16 2025</i></li>
-          </br>
-          <li> <b>Invited talk at the University of Chicago.</b> <i>on Oct 8 2024</i></li>
-          <li> <b>Supported by the Mathworks Fellowship.</b> <i>Jun 28 2024</i></li>
-          <li> <b>Invited talk at the Brown Visual Computing Seminar.</b> <i>on May 3 2024</i></li>
-          <li> <b>Talk at MIT's Visual Computing Seminar</b> <i>on Apr 16 2024</i></li>
-          <li> <b>Variational Barycentric Coordinates accepted to SIGGRAPH Asia!</b> <i>on Sep 13 2023</i></li>
-          <li> <b>Gave a talk at the <a href="http://www.geometrie.tugraz.at/events/og2023.html">Geometry Workshop in <s>Obergurgl</s> Innsbruck 2023</a> </b> <i>on Aug 28 2023</i></li>
-          <li> <b>I will be presenting at the Queer in AI workshop at NeurIPS 2022.</b> <i>on Nov 28 2022</i></li>
+          <li class="collapsable"> <b>Invited talk at the University of Chicago.</b> <i>on Oct 8 2024</i></li>
+          <li class="collapsable"> <b>Supported by the Mathworks Fellowship.</b> <i>Jun 28 2024</i></li>
+          <li class="collapsable"> <b>Invited talk at the Brown Visual Computing Seminar.</b> <i>on May 3 2024</i></li>
+          <li class="collapsable"> <b>Talk at MIT's Visual Computing Seminar</b> <i>on Apr 16 2024</i></li>
+          <li class="collapsable"> <b>Variational Barycentric Coordinates accepted to SIGGRAPH Asia!</b> <i>on Sep 13 2023</i></li>
+          <li class="collapsable"> <b>Gave a talk at the <a href="http://www.geometrie.tugraz.at/events/og2023.html">Geometry Workshop in <s>Obergurgl</s> Innsbruck 2023</a> </b> <i>on Aug 28 2023</i></li>
+          <li class="collapsable"> <b>I will be presenting at the Queer in AI workshop at NeurIPS 2022.</b> <i>on Nov 28 2022</i></li>
           <!-- <li> <b>New website is live!</b> <i>on Nov 23 2022</i></li> -->
-          <li> <b>I gave a guest lecture at UNC.</b> <i>on Nov 22 2022</i> 
-          <li> <b>I was awarded MIT's Presidential Fellowship and will start my PhD in July 2022.</b> <i>on Mar 24 2022</i></li>
+          <li class="collapsable"> <b>I gave a guest lecture at UNC.</b> <i>on Nov 22 2022</i> 
+          <li class="collapsable"> <b>I was awarded MIT's Presidential Fellowship and will start my PhD in July 2022.</b> <i>on Mar 24 2022</i></li>
         </ul>
+        <button id="collapse" aria-label="Expand News">
+          <i class="fa fa-chevron-down" aria-hidden="false"></i>
+        </button>
     </div>
 
 		<div id="publications" class="content-left">

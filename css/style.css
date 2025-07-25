@@ -323,6 +323,23 @@ h1 {
 	margin: 0px;
 }
 
+.collapsable {
+	display: none;
+}
+
+button#collapse {
+	width: 100%;
+	padding: 0rem;
+	border: none;
+	background: #00000000;
+	color: var(--dark-gray);
+	font-size: 1.25rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 #publication {
     display: flex;
     flex-direction: row;
@@ -352,6 +369,10 @@ h1 {
 	font-size:0.9em;
 	color: var(--dark-gray);
     margin-bottom: 2px;
+}
+
+#news ul {
+	margin-bottom: 0.75rem;
 }
 
 #news i	{
