@@ -110,16 +110,17 @@ a:hover	{
 	border-top: 1.5px solid var(--red);
 }
 
-#header{
-	text-align:left;
-	margin: 2em 4em 1em 4em;
+#header {
+	text-align: left;
+	margin: 2em 0em 1em 0em;
     display: flex;
     align-items: flex-start;
+	gap: 2em;
     font-family: 'Roboto Serif', serif;
 }
 
 #header #face-container {
-	margin: auto 2em auto auto;
+	margin: 0 0 0 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -128,27 +129,58 @@ a:hover	{
 }
 
 #header img {
-    width: 10em;
+	max-width: 10em;
+    /* width: var(--img-size);
+    min-height: calc(0.65 * var(--img-size)); */
     border-radius: 50%;
+    filter: drop-shadow(2px 2px 3px var(--very-dark-gray));
 }
 
-#title {
+#person-info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 1rem;
+	width: 100%;
 }
 
-#name-and-contact {
+h1 {
+    font-family: 'Roboto', sans-serif;
+    margin: var(--flew-wrap-margin) 2rem 0rem 0px;
+    font-weight: 200;
+    font-size: 3rem;
+    line-height: 3rem;
+    color: var(--red);
+    /* white-space: nowrap; */
+    vertical-align: baseline;
+	display: inherit;
+    flex-direction: inherit;
+    justify-content: inherit;
+	gap: inherit;
+    flex-wrap: nowrap;
+}
+
+#name-and-discipline {
+	width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: baseline;
     flex-wrap: wrap;
+	gap: 1.3em;
     margin-top: calc(-1 * var(--flew-wrap-margin));
 }
 
+#name-and-discipline #divider {
+	height: inherit;
+	border-left: 1px solid;
+	border-color: var(--red);
+}
+
+#name-and-discipline h1 {
+	width: 100%;
+}
 
 #paper-header{
 	text-align:left;
@@ -272,19 +304,6 @@ a:hover	{
 	text-align: justify;
 }
 
-
-h1 {
-    font-family: 'Roboto', sans-serif;
-    margin: var(--flew-wrap-margin) 2rem 0rem 0px;
-    font-weight: 200;
-    font-size: 3rem;
-    line-height: 3rem;
-    color: var(--red);
-    white-space: nowrap;
-    vertical-align: baseline;
-    /* display: inline-block; */
-}
-
 #icons {
     margin: var(--flew-wrap-margin) 0px 0rem 0px;
     /* margin: 0; */
@@ -303,6 +322,10 @@ h1 {
 #intro {
     margin-top: 1rem;
     margin-bottom: 0;
+	width: 100%;
+	flex-wrap: wrap;
+	text-align: justify;
+	text-justify: auto;
 	color: var(--very-dark-gray);
 }
 
@@ -616,12 +639,26 @@ button#collapse {
 }
 
 /* All smaller screens get this: */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 910px) {
 	#main {
 		width: calc(100% - 5px);
 		margin: 0;
 	}
 
+	#header {
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#name-and-discipline {
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	
 	#paper-title {
 		display: flex;
 		flex-direction: row;
@@ -685,6 +722,18 @@ button#collapse {
 }
 
 @media screen and (max-width: 450px) {
+	#name-and-discipline {
+		align-content: space-between;
+		justify-content: space-between;
+		align-items: space-between;
+		text-align: space-between;
+		gap: 0em;
+	}
+
+	#name-and-discipline h1 {
+		font-size: 1.7em;
+	}
+
 	#paper-title h1 {
 		font-size: 1.4rem;
 		line-height: 1.6rem;
