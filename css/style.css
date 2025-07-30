@@ -721,6 +721,18 @@ button#collapse {
 	}
 }
 
+@media screen and (max-width: 380px) {
+	#name-and-discipline h1 {
+		font-size: 1.6em;
+	}
+}
+
+@media screen and (min-width: 380px) and (max-width: 450px) {
+	#name-and-discipline h1 {
+		font-size: 1.8em;
+	}
+}
+
 @media screen and (max-width: 450px) {
 	#name-and-discipline {
 		align-content: space-between;
@@ -728,10 +740,6 @@ button#collapse {
 		align-items: space-between;
 		text-align: space-between;
 		gap: 0em;
-	}
-
-	#name-and-discipline h1 {
-		font-size: 1.7em;
 	}
 
 	#paper-title h1 {
