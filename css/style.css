@@ -43,6 +43,7 @@
     --width: 65%;
     --flew-wrap-margin: 0.5rem;
 	--img-size: 10em;
+	--llm-display: none;
 }  
 
 body	{
