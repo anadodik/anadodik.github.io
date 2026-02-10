@@ -5,7 +5,7 @@ from data import PERSON, INTRO, PUBLICATIONS
 RESOURCE_ICONS = {
     "paper": "fa-solid fa-file-pdf",
     "arXiv": "ai ai-arxiv ai-5x ai-border ai-inverse",
-    "supplementary": "fa-solid fa-file-pdf",
+    "supplementary": "fa-solid fa-file-zipper",
     "code": "fa-solid fa-code",
     "thesis": "fa-solid fa-file-pdf",
     "presentation": "bi bi-file-earmark-slides-fill",
@@ -14,12 +14,13 @@ RESOURCE_ICONS = {
     "talk": "fa-solid fa-video",
     "interactive": "fa fa-arrow-pointer",
     "website": "fa-solid fa-arrow-up-right-from-square",
+    "website-soon": "fa-solid fa-arrow-up-right-from-square",
 }
 
 RESOURCE_READABLE_NAMES = {
     "paper": "Paper",
     "arXiv": "arXiv",
-    "supplementary": "Supplementary",
+    "supplementary": "Supplemental",
     "code": "Code",
     "thesis": "Thesis",
     "presentation": "Presentation",
@@ -28,6 +29,7 @@ RESOURCE_READABLE_NAMES = {
     "talk": "Talk",
     "interactive": "Interactive Results",
     "website": "Project Website",
+    "website-soon": "Project Website (coming soon...)",
 }
 
 if __name__ == "__main__":
