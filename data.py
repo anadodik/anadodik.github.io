@@ -132,24 +132,24 @@ PERSON = Person(
 )
 
 PUBLICATIONS = [
-    Publication(
-        title="The American Fever Dream: How Generative Models Privatize the Social Fabric",
-        nickname="fever-dream",
-        authors=["Ana Dodik", "Moira Weigel"],
-        year="2025",
-        venue="Preprint",
-        resources={
-            "website-soon": "#",
-            # "website": "/publication/meschers",
-            "paper": "/publication/fever-dream/fever-dream.pdf",
-            # "arXiv": "#",
-            # "video": "#",
-            # "supplementary": "#",
-            # "talk": "#",
-            "bibtex": "/publication/fever-dream/dodikweigel2025fever.bib",
-        },
-        featured_image="featured.png",
-    ),
+    # Publication(
+    #     title="The American Fever Dream: How Generative Models Privatize the Social Fabric",
+    #     nickname="fever-dream",
+    #     authors=["Ana Dodik", "Moira Weigel"],
+    #     year="2025",
+    #     venue="Preprint",
+    #     resources={
+    #         "website-soon": "#",
+    #         # "website": "/publication/meschers",
+    #         "paper": "/publication/fever-dream/fever-dream.pdf",
+    #         # "arXiv": "#",
+    #         # "video": "#",
+    #         # "supplementary": "#",
+    #         # "talk": "#",
+    #         "bibtex": "/publication/fever-dream/dodikweigel2025fever.bib",
+    #     },
+    #     featured_image="featured.png",
+    # ),
     Publication(
         title="Robust Biharmonic Skinning Using Geometric Fields",
         nickname="rbs",
