@@ -65,9 +65,11 @@ a:hover	{
 }
 
 #main {
-	width: var(--width);
-	max-width: 1000px;
-	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px; /* min(1000px, calc(100% - 2 * clamp(1rem, 5vw, 4rem))); */
+	margin-inline: auto;
+	padding: clamp(5px, 1vw, 50px);
+	box-sizing: border-box;
 }
 
 #nav {
@@ -142,16 +144,15 @@ a:hover	{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 1rem;
 	width: 100%;
 }
 
 h1 {
     font-family: 'Roboto', sans-serif;
-    margin: var(--flew-wrap-margin) 2rem 0rem 0px;
+    margin: var(--flew-wrap-margin) 0rem 0rem 0px;
     font-weight: 200;
-    font-size: 3rem;
-    line-height: 3rem;
+	font-size: clamp(1.6rem, 1.2rem + 4vw, 3rem);
+	line-height: clamp(1.6rem, 1.2rem + 2.5vw, 3rem);
     color: var(--red);
     /* white-space: nowrap; */
     vertical-align: baseline;
@@ -306,12 +307,9 @@ h1 {
 }
 
 #icons {
-    margin: var(--flew-wrap-margin) 0px 0rem 0px;
-    /* margin: 0; */
+    margin: calc(2 * var(--flew-wrap-margin)) 0px 0rem 0px;
     white-space: nowrap;
-    /* line-height: 3rem; */
     vertical-align: baseline;
-    /* text-align: center; */
     font-size: 1.5em;
 }
 
@@ -551,13 +549,7 @@ button#collapse {
     border-style: solid;
 }
 
-@media screen and (min-width: 450px) and (max-width: 850px) {
-	#main {
-		width: calc(100% - 20px);
-		margin: 0 auto;
-		padding: 10px;
-	}
-	
+@media screen and (min-width: 450px) and (max-width: 850px) {	
 	#header {
 		margin-left: 0px;
 		margin-right: 0px;
@@ -574,11 +566,6 @@ button#collapse {
 		padding-bottom: 0.5em;
 	}
 
-    h1 {
-        font-size: 2.5rem;
-        line-height: 2.5rem;
-    }
-
 	h2 {
 		font-size: 2em;
 	}
@@ -590,12 +577,6 @@ button#collapse {
 }
 
 @media screen and (min-width: 350px) and (max-width: 450px) {
-	#main {
-		width: calc(100% - 5px);
-		margin: 0 auto;
-		padding: 5px;
-	}
-
 	#header {
 		margin-left: 0px;
 		margin-right: 0px;
@@ -605,11 +586,6 @@ button#collapse {
 	#header img {
 		margin: auto 1rem auto auto;
 		width: 8em;
-	}
-
-	#header h1 {
-		font-size: 2.5rem;
-		margin-right: 0px;
 	}
 
 	#icons {
@@ -642,8 +618,13 @@ button#collapse {
 /* All smaller screens get this: */
 @media screen and (max-width: 910px) {
 	#main {
-		width: calc(100% - 5px);
 		margin: 0;
+	}
+
+	#header h1 {
+		margin: 0px 0px 0px 0px;
+		font-size: clamp(1.6rem, 6.9vw, 3rem);
+		/* line-height: clamp(1.6rem, 1.2rem + 2.5vw, 3rem); */
 	}
 
 	#header {
@@ -719,18 +700,6 @@ button#collapse {
 	#publication-links-pubpage a, #publication-links-pubpage a:link, #publication-links-pubpage a:visited {
 		padding: 0.05em 0.65em 0.05em 0.65em;
 		font-size: 0.9em;
-	}
-}
-
-@media screen and (max-width: 380px) {
-	#name-and-discipline h1 {
-		font-size: 1.6em;
-	}
-}
-
-@media screen and (min-width: 380px) and (max-width: 450px) {
-	#name-and-discipline h1 {
-		font-size: 1.8em;
 	}
 }
 
