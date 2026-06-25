@@ -115,9 +115,9 @@ a:hover	{
 
 #header {
 	text-align: left;
+	align-items: center;
 	margin: 2em 0em 1em 0em;
     display: flex;
-    align-items: flex-start;
 	gap: 2em;
     font-family: 'Roboto Serif', serif;
 }
