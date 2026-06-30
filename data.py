@@ -161,7 +161,7 @@ PUBLICATIONS = [
             "website-soon": "#",
             "paper": "/publication/iskra/iskra.pdf",
             "arXiv": "https://arxiv.org/abs/2602.12105",
-            "code-soon": "#",
+            "code": "https://github.com/anadodik/iskra",
             # "video": "/publication/iskra/iskra.mp4",
             # "supplementary": "#",
             # "talk": "#",
