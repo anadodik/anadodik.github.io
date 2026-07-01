@@ -40,6 +40,8 @@
     --dark-gray: #898d8d;
     --gray: #c7c9c7;
     --white: #ffffff;
+	--cream: #FCFAF7;
+	--cream-seethrough: #FCFAF780;
     --width: 65%;
     --flew-wrap-margin: 0.5rem;
 	--img-size: 10em;
@@ -547,6 +549,47 @@ button#collapse {
 	border-radius: 10px;
     border-color: var(--red);
     border-style: solid;
+}
+
+#bibtex-dialog {
+    max-width: 90vw;
+    width: 50rem;
+    padding: 1rem;
+    border: none;
+	background-color: var(--cream);
+	border-radius: 10px;
+    border-color: var(--red);
+    border-style: solid;
+	border-width: 0.5px;
+}
+
+#bibtex-dialog::backdrop {
+    background-color: var(--cream-seethrough);
+}
+#bibtex-dialog h2 {
+	margin-top: 0.25rem;
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+	margin-bottom: 0.5rem;
+}
+
+#bibtex-dialog pre {
+	font-family: 'Fira Code', monospace;
+    color: var(--very-dark-gray);
+	background-color: var(--white);
+	border-radius: 10px;
+    border-color: var(--red);
+    border-style: solid;
+	border-width: 0.5px;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 0.8em;
+    padding: 1rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+	margin: 0rem;
 }
 
 @media screen and (min-width: 450px) and (max-width: 850px) {	

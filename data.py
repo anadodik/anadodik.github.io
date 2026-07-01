@@ -202,7 +202,7 @@ PUBLICATIONS = [
             # "video": "/publication/iskra/iskra.mp4",
             # "supplementary": "#",
             # "talk": "#",
-            "bibtex": "/publication/fastperm/zarebavanimahmoud2026fastperm.bib",
+            # "bibtex": "/publication/fastperm/zarebavanimahmoud2026fastperm.bib",
         },
         featured_image="featured.png",
     ),

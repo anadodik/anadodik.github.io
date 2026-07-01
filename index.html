@@ -24,14 +24,25 @@
             : '<i class="fa fa-chevron-down" aria-hidden="true"></i>';
           collapseButton.setAttribute('aria-label', expanded ? 'Collapse News' : 'Expand News');
         });
+        
+        const bibtexDialog = document.getElementById('bibtex-dialog');
+        const bibtexText = document.getElementById('bibtex-text');
+        document.querySelectorAll('a.bibtex-link').forEach(link => {
+          link.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const text = await fetch(link.href).then(r => r.text());
+            bibtexText.textContent = text;
+            bibtexDialog.showPopover();
+          });
+        });
       }
     </script>
 
     <title>Ana Dodik</title>
     <meta charset="utf-8">
     <link href="css/style.css" type="text/css" rel="stylesheet"></link>
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,400;8..144,600&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,300;0,8..144,400;0,8..144,600;1,8..144,100;1,8..144,300;1,8..144,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">
@@ -155,11 +166,38 @@
           </div>
           <div id="publication-links">
             
-              <div id="publication-link"><a  href="/publication/blowups/blowups.pdf"><i class="fa-solid fa-file-pdf"></i> Paper </a></div>
             
-              <div id="publication-link"><a  href="https://arxiv.org/abs/2605.18215"><i class="ai ai-arxiv ai-5x ai-border ai-inverse"></i> arXiv </a></div>
+              <div id="publication-link">
+                <a href="/publication/blowups/blowups.pdf">
+                  <i class="fa-solid fa-file-pdf"></i> 
+                  Paper
+                </a>
+              </div>
             
-              <div id="publication-link"><a type="text/plain" href="/publication/blowups/petrov2026blowups.bib"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
+            
+            
+              <div id="publication-link">
+                <a href="https://arxiv.org/abs/2605.18215">
+                  <i class="ai ai-arxiv ai-5x ai-border ai-inverse"></i> 
+                  arXiv
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                  <a class="bibtex-link" href="/publication/blowups/petrov2026blowups.bib">
+                    <i class="fa-solid fa-quote-right"></i>
+                    BibTeX
+                  </a>
+                  <!--<button type="button"
+                    class="bibtex-link"
+                    popovertarget="bibtex-dialog"
+                    data-bib="/publication/blowups/petrov2026blowups.bib">
+                      <i class="fa-solid fa-quote-right"></i> BibTeX
+                  </button>-->
+              </div>
+            
             
           </div>
         </div>
@@ -193,13 +231,47 @@
           </div>
           <div id="publication-links">
             
-              <div id="publication-link"><a  href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Project Website (coming soon...) </a></div>
             
-              <div id="publication-link"><a  href="/publication/synthsoc/synthsoc.pdf"><i class="fa-solid fa-file-pdf"></i> Paper </a></div>
+              <div id="publication-link">
+                <a href="#">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> 
+                  Project Website (coming soon...)
+                </a>
+              </div>
             
-              <div id="publication-link"><a  href="https://arxiv.org/abs/2605.14090"><i class="ai ai-arxiv ai-5x ai-border ai-inverse"></i> arXiv </a></div>
             
-              <div id="publication-link"><a type="text/plain" href="/publication/synthsoc/dodikweigel2025synthsoc.bib"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
+            
+              <div id="publication-link">
+                <a href="/publication/synthsoc/synthsoc.pdf">
+                  <i class="fa-solid fa-file-pdf"></i> 
+                  Paper
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                <a href="https://arxiv.org/abs/2605.14090">
+                  <i class="ai ai-arxiv ai-5x ai-border ai-inverse"></i> 
+                  arXiv
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                  <a class="bibtex-link" href="/publication/synthsoc/dodikweigel2025synthsoc.bib">
+                    <i class="fa-solid fa-quote-right"></i>
+                    BibTeX
+                  </a>
+                  <!--<button type="button"
+                    class="bibtex-link"
+                    popovertarget="bibtex-dialog"
+                    data-bib="/publication/synthsoc/dodikweigel2025synthsoc.bib">
+                      <i class="fa-solid fa-quote-right"></i> BibTeX
+                  </button>-->
+              </div>
+            
             
           </div>
         </div>
@@ -238,15 +310,56 @@
           </div>
           <div id="publication-links">
             
-              <div id="publication-link"><a  href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Project Website (coming soon...) </a></div>
             
-              <div id="publication-link"><a  href="/publication/iskra/iskra.pdf"><i class="fa-solid fa-file-pdf"></i> Paper </a></div>
+              <div id="publication-link">
+                <a href="#">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> 
+                  Project Website (coming soon...)
+                </a>
+              </div>
             
-              <div id="publication-link"><a  href="https://arxiv.org/abs/2602.12105"><i class="ai ai-arxiv ai-5x ai-border ai-inverse"></i> arXiv </a></div>
             
-              <div id="publication-link"><a  href="https://github.com/anadodik/iskra"><i class="fa-solid fa-code"></i> Code </a></div>
             
-              <div id="publication-link"><a type="text/plain" href="/publication/iskra/dodik2026iskra.bib"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
+              <div id="publication-link">
+                <a href="/publication/iskra/iskra.pdf">
+                  <i class="fa-solid fa-file-pdf"></i> 
+                  Paper
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                <a href="https://arxiv.org/abs/2602.12105">
+                  <i class="ai ai-arxiv ai-5x ai-border ai-inverse"></i> 
+                  arXiv
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                <a href="https://github.com/anadodik/iskra">
+                  <i class="fa-solid fa-code"></i> 
+                  Code
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                  <a class="bibtex-link" href="/publication/iskra/dodik2026iskra.bib">
+                    <i class="fa-solid fa-quote-right"></i>
+                    BibTeX
+                  </a>
+                  <!--<button type="button"
+                    class="bibtex-link"
+                    popovertarget="bibtex-dialog"
+                    data-bib="/publication/iskra/dodik2026iskra.bib">
+                      <i class="fa-solid fa-quote-right"></i> BibTeX
+                  </button>-->
+              </div>
+            
             
           </div>
         </div>
@@ -310,11 +423,23 @@
           </div>
           <div id="publication-links">
             
-              <div id="publication-link"><a  href="https://arxiv.org/abs/2602.00898"><i class="ai ai-arxiv ai-5x ai-border ai-inverse"></i> arXiv </a></div>
             
-              <div id="publication-link"><a  href="https://github.com/BehroozZare/fast-permute"><i class="fa-solid fa-code"></i> Code </a></div>
+              <div id="publication-link">
+                <a href="https://arxiv.org/abs/2602.00898">
+                  <i class="ai ai-arxiv ai-5x ai-border ai-inverse"></i> 
+                  arXiv
+                </a>
+              </div>
             
-              <div id="publication-link"><a type="text/plain" href="/publication/fastperm/zarebavanimahmoud2026fastperm.bib"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
+            
+            
+              <div id="publication-link">
+                <a href="https://github.com/BehroozZare/fast-permute">
+                  <i class="fa-solid fa-code"></i> 
+                  Code
+                </a>
+              </div>
+            
             
           </div>
         </div>
@@ -358,15 +483,56 @@
           </div>
           <div id="publication-links">
             
-              <div id="publication-link"><a  href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Project Website (coming soon...) </a></div>
             
-              <div id="publication-link"><a  href="/publication/rbs/rbs.pdf"><i class="fa-solid fa-file-pdf"></i> Paper </a></div>
+              <div id="publication-link">
+                <a href="#">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> 
+                  Project Website (coming soon...)
+                </a>
+              </div>
             
-              <div id="publication-link"><a  href="/publication/rbs/rbs.mp4"><i class="fa-solid fa-video"></i> Video </a></div>
             
-              <div id="publication-link"><a  href="https://dl.acm.org/doi/suppl/10.1145/3771928/suppl_file/TOG-24-0209-supp.zip"><i class="fa-solid fa-file-zipper"></i> Supplemental </a></div>
             
-              <div id="publication-link"><a type="text/plain" href="/publication/rbs/rbs.bib"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
+              <div id="publication-link">
+                <a href="/publication/rbs/rbs.pdf">
+                  <i class="fa-solid fa-file-pdf"></i> 
+                  Paper
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                <a href="/publication/rbs/rbs.mp4">
+                  <i class="fa-solid fa-video"></i> 
+                  Video
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                <a href="https://dl.acm.org/doi/suppl/10.1145/3771928/suppl_file/TOG-24-0209-supp.zip">
+                  <i class="fa-solid fa-file-zipper"></i> 
+                  Supplemental
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                  <a class="bibtex-link" href="/publication/rbs/rbs.bib">
+                    <i class="fa-solid fa-quote-right"></i>
+                    BibTeX
+                  </a>
+                  <!--<button type="button"
+                    class="bibtex-link"
+                    popovertarget="bibtex-dialog"
+                    data-bib="/publication/rbs/rbs.bib">
+                      <i class="fa-solid fa-quote-right"></i> BibTeX
+                  </button>-->
+              </div>
+            
             
           </div>
         </div>
@@ -425,13 +591,47 @@
           </div>
           <div id="publication-links">
             
-              <div id="publication-link"><a  href="/publication/meschers"><i class="fa-solid fa-arrow-up-right-from-square"></i> Project Website </a></div>
             
-              <div id="publication-link"><a  href="/publication/meschers/Meschers.pdf"><i class="fa-solid fa-file-pdf"></i> Paper </a></div>
+              <div id="publication-link">
+                <a href="/publication/meschers">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> 
+                  Project Website
+                </a>
+              </div>
             
-              <div id="publication-link"><a  href="/publication/meschers/supplemental.mp4"><i class="fa-solid fa-file-zipper"></i> Supplemental </a></div>
             
-              <div id="publication-link"><a type="text/plain" href="/publication/meschers/meschers.bib"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
+            
+              <div id="publication-link">
+                <a href="/publication/meschers/Meschers.pdf">
+                  <i class="fa-solid fa-file-pdf"></i> 
+                  Paper
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                <a href="/publication/meschers/supplemental.mp4">
+                  <i class="fa-solid fa-file-zipper"></i> 
+                  Supplemental
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                  <a class="bibtex-link" href="/publication/meschers/meschers.bib">
+                    <i class="fa-solid fa-quote-right"></i>
+                    BibTeX
+                  </a>
+                  <!--<button type="button"
+                    class="bibtex-link"
+                    popovertarget="bibtex-dialog"
+                    data-bib="/publication/meschers/meschers.bib">
+                      <i class="fa-solid fa-quote-right"></i> BibTeX
+                  </button>-->
+              </div>
+            
             
           </div>
         </div>
@@ -475,11 +675,38 @@
           </div>
           <div id="publication-links">
             
-              <div id="publication-link"><a  href="/publication/vbc/vbc.pdf"><i class="fa-solid fa-file-pdf"></i> Paper </a></div>
             
-              <div id="publication-link"><a  href="/publication/vbc/supplemental.zip"><i class="fa-solid fa-file-zipper"></i> Supplemental </a></div>
+              <div id="publication-link">
+                <a href="/publication/vbc/vbc.pdf">
+                  <i class="fa-solid fa-file-pdf"></i> 
+                  Paper
+                </a>
+              </div>
             
-              <div id="publication-link"><a type="text/plain" href="/publication/vbc/vbc.bib"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
+            
+            
+              <div id="publication-link">
+                <a href="/publication/vbc/supplemental.zip">
+                  <i class="fa-solid fa-file-zipper"></i> 
+                  Supplemental
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                  <a class="bibtex-link" href="/publication/vbc/vbc.bib">
+                    <i class="fa-solid fa-quote-right"></i>
+                    BibTeX
+                  </a>
+                  <!--<button type="button"
+                    class="bibtex-link"
+                    popovertarget="bibtex-dialog"
+                    data-bib="/publication/vbc/vbc.bib">
+                      <i class="fa-solid fa-quote-right"></i> BibTeX
+                  </button>-->
+              </div>
+            
             
           </div>
         </div>
@@ -528,15 +755,56 @@
           </div>
           <div id="publication-links">
             
-              <div id="publication-link"><a  href="https://gender-in-graphics.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i> Project Website </a></div>
             
-              <div id="publication-link"><a  href="/publication/gender-in-graphics/gender-as-a-variable.pdf"><i class="fa-solid fa-file-pdf"></i> Paper </a></div>
+              <div id="publication-link">
+                <a href="https://gender-in-graphics.github.io/">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> 
+                  Project Website
+                </a>
+              </div>
             
-              <div id="publication-link"><a  href="https://youtu.be/GOn3-P6KZ9E"><i class="fa-solid fa-video"></i> Talk </a></div>
             
-              <div id="publication-link"><a  href="/publication/gender-in-graphics/gender-as-a-variable-supplement.pdf"><i class="fa-solid fa-file-zipper"></i> Supplemental </a></div>
             
-              <div id="publication-link"><a type="text/plain" href="/publication/gender-in-graphics/dodiksellan2022gender.bib"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
+              <div id="publication-link">
+                <a href="/publication/gender-in-graphics/gender-as-a-variable.pdf">
+                  <i class="fa-solid fa-file-pdf"></i> 
+                  Paper
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                <a href="https://youtu.be/GOn3-P6KZ9E">
+                  <i class="fa-solid fa-video"></i> 
+                  Talk
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                <a href="/publication/gender-in-graphics/gender-as-a-variable-supplement.pdf">
+                  <i class="fa-solid fa-file-zipper"></i> 
+                  Supplemental
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                  <a class="bibtex-link" href="/publication/gender-in-graphics/dodiksellan2022gender.bib">
+                    <i class="fa-solid fa-quote-right"></i>
+                    BibTeX
+                  </a>
+                  <!--<button type="button"
+                    class="bibtex-link"
+                    popovertarget="bibtex-dialog"
+                    data-bib="/publication/gender-in-graphics/dodiksellan2022gender.bib">
+                      <i class="fa-solid fa-quote-right"></i> BibTeX
+                  </button>-->
+              </div>
+            
             
           </div>
         </div>
@@ -580,26 +848,92 @@
           </div>
           <div id="publication-links">
             
-              <div id="publication-link"><a  href="publication/sdmm-paper/sdmm-paper.pdf"><i class="fa-solid fa-file-pdf"></i> Paper </a></div>
             
-              <div id="publication-link"><a  href="https://www.research-collection.ethz.ch/handle/20.500.11850/411118"><i class="fa-solid fa-file-pdf"></i> Thesis </a></div>
+              <div id="publication-link">
+                <a href="publication/sdmm-paper/sdmm-paper.pdf">
+                  <i class="fa-solid fa-file-pdf"></i> 
+                  Paper
+                </a>
+              </div>
             
-              <div id="publication-link"><a  href="https://youtu.be/7D2r6K4rrqA?t=1774"><i class="fa-solid fa-video"></i> Talk </a></div>
             
-              <div id="publication-link"><a  href="/publication/sdmm-paper/sdmm-paper-suppl.pdf"><i class="fa-solid fa-file-zipper"></i> Supplemental </a></div>
             
-              <div id="publication-link"><a  href="/publication/sdmm-paper/sdmm-video.mp4"><i class="fa-solid fa-video"></i> Video </a></div>
+              <div id="publication-link">
+                <a href="https://www.research-collection.ethz.ch/handle/20.500.11850/411118">
+                  <i class="fa-solid fa-file-pdf"></i> 
+                  Thesis
+                </a>
+              </div>
             
-              <div id="publication-link"><a  href="https://github.com/anadodik/sdmm-mitsuba"><i class="fa-solid fa-code"></i> Code </a></div>
             
-              <div id="publication-link"><a  href="/publication/sdmm-paper/website/index.html"><i class="fa fa-arrow-pointer"></i> Interactive Results </a></div>
             
-              <div id="publication-link"><a type="text/plain" href="/publication/sdmm-paper/dodik21pathguiding.bib"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
+              <div id="publication-link">
+                <a href="https://youtu.be/7D2r6K4rrqA?t=1774">
+                  <i class="fa-solid fa-video"></i> 
+                  Talk
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                <a href="/publication/sdmm-paper/sdmm-paper-suppl.pdf">
+                  <i class="fa-solid fa-file-zipper"></i> 
+                  Supplemental
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                <a href="/publication/sdmm-paper/sdmm-video.mp4">
+                  <i class="fa-solid fa-video"></i> 
+                  Video
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                <a href="https://github.com/anadodik/sdmm-mitsuba">
+                  <i class="fa-solid fa-code"></i> 
+                  Code
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                <a href="/publication/sdmm-paper/website/index.html">
+                  <i class="fa fa-arrow-pointer"></i> 
+                  Interactive Results
+                </a>
+              </div>
+            
+            
+            
+              <div id="publication-link">
+                  <a class="bibtex-link" href="/publication/sdmm-paper/dodik21pathguiding.bib">
+                    <i class="fa-solid fa-quote-right"></i>
+                    BibTeX
+                  </a>
+                  <!--<button type="button"
+                    class="bibtex-link"
+                    popovertarget="bibtex-dialog"
+                    data-bib="/publication/sdmm-paper/dodik21pathguiding.bib">
+                      <i class="fa-solid fa-quote-right"></i> BibTeX
+                  </button>-->
+              </div>
+            
             
           </div>
         </div>
       </div>
       
+      <dialog id="bibtex-dialog" class="bibtex-dialog" popover="auto">
+        <h2>BibTeX</h2>
+        <pre id="bibtex-text"></pre>
+      </dialog>
 		</div>
     <!-- <div id="media" class="content-left">
       <h2>Media</h2>
