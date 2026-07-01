@@ -133,6 +133,24 @@ PERSON = Person(
 
 PUBLICATIONS = [
     Publication(
+        title="Tangent Blow-Ups for Processing Non-Manifold Geometry",
+        nickname="blowups",
+        authors=["Alice Petrov", "Mohammad Sina Nabizadeh", "Ana Dodik", "Justin Solomon"],
+        year="2026",
+        venue="Eurographics Symposium on Geometry Processing",
+        resources={
+            # "website-soon": "#",
+            # "website": "/publication/blowups",
+            "paper": "/publication/blowups/blowups.pdf",
+            "arXiv": "https://arxiv.org/abs/2605.18215",
+            # "video": "#",
+            # "supplementary": "#",
+            # "talk": "#",
+            "bibtex": "/publication/blowups/petrov2026blowups.bib",
+        },
+        featured_image="featured.png",
+    ),
+    Publication(
         title="Synthetic Sociality: How Generative Models Privatize the Social Fabric",
         nickname="synthsoc",
         authors=["Ana Dodik", "Moira Weigel"],
