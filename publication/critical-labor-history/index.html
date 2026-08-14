@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Critical Labor History of Generative Models</title>
+    <meta charset="utf-8">
+    <link href="../../css/style.css" type="text/css" rel="stylesheet">
+    </link>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,400;8..144,600&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,300;0,8..144,400;0,8..144,600;1,8..144,100;1,8..144,300;1,8..144,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <meta content="Critical Labor History of Generative Models" name="description">
+    </meta>
+    <meta content="Ana Dodik" name="author">
+    </meta>
+    <meta content="Copyright 2026 Ana Dodik. All rights reserved." name="copyright">
+    </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function readFile(filePath) {
+            var result = null;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", filePath, false);
+            xmlhttp.send();
+            if (xmlhttp.status == 200) {
+                result = xmlhttp.responseText;
+            }
+            return result;
+        }
+        function scrollIntoBibtex() {
+            var bibtexContainer = document.getElementById("bibtex");
+            console.log(bibtexContainer);
+            bibtexContainer.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+                inline: "nearest"
+            });
+        }
+
+        window.onload = () => {
+            document.getElementById("bibtex-code").innerHTML = readFile("dodik2026critical.bib");
+        }
+    </script>
+    <style>
+        /* Sibling of h1 so #paper-title's align-items: baseline applies */
+        #paper-title > em {
+            font-style: italic;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 200;
+            font-size: 1.1rem;
+            line-height: 1.1rem;
+            color: var(--darker-gray);
+            margin-left: 0.5rem;
+            white-space: nowrap;
+            vertical-align: baseline;
+            align-self: baseline;
+        }
+        #talk-slides h2 {
+            color: var(--red);
+            width: 100%;
+            font-family: Roboto, sans-serif;
+            font-weight: 200;
+            text-align: justify;
+        }
+        #talk-slides p,
+        #talk-slides li {
+            color: var(--darker-gray);
+            display: block;
+            width: 100%;
+            font-family: 'Linux Libertine';
+            text-align: justify;
+        }
+        #talk-slides ul.bullets {
+            padding-left: 1.5em;
+        }
+        #talk-slides ul.bullets li {
+            display: list-item;
+            list-style: disc;
+        }
+        #talk-slides figure {
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        #talk-slides section {
+            margin-bottom: 1.5rem;
+        }
+        #talk-slides hr {
+            border: none;
+            border-top: 1px solid var(--gray);
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="paper-header">
+            <div id="paper-title">
+                <h1>Critical Labor History of Generative Models</h1>
+                <em>SIGGRAPH Talks &rsquo;26</em>
+            </div>
+        </div>
+        <div id="authors">
+            <p><a href="https://anadodik.github.io">ANA DODIK</a>, MIT CSAIL</p>
+        </div>
+        
+        <div id="publication-links-pubpage" class="content-left">
+            <div id="publication-link"><a href="/publication/critical-labor-history/critical-labor-history.pdf"><i class="fa-solid fa-file-pdf"></i> Paper </a></div>
+            <div id="publication-link"><a href="#talk-slides"><i class="bi bi-file-earmark-slides-fill"></i> Presentation </a></div>
+            <div id="publication-link"><a href="javascript:scrollIntoBibtex();"><i class="fa-solid fa-quote-right"></i> BibTeX </a></div>
+        </div>
+
+        <div id="teaser-image" class="content-left middle-section">
+            <img src="slides/slide-01.jpg" alt="Title slide: Critical Labor History of Generative Models" style="width: 100%;">
+        </div>
+
+        <div id="abstract" class="content-left middle-section">
+            <h2>Abstract</h2>
+            <p>
+                Our work introduces SIGGRAPH to critical theories of generative models, focusing on socioeconomic relations to research and art. We introduce critical theory through computing's relationship to commodification and labor and contrast two views of generative models: one as the automation of labor and another examining their role in altering human sociality.
+            </p>
+        </div>
+
+        <div id="talk-slides" class="content-left middle-section">
+            <h2>Talk Slides &amp; Speaker Notes</h2>
+            <p>
+                Below are the talk slides with accompanying speaker notes from the SIGGRAPH ’26 short talk.
+                The talk was 20 minutes and was aimed at a computer graphics audience, meaning that we had to gloss over a lot of topics.
+                For a more thorough treatment, I will refer you to our recent preprint <a href="https://arxiv.org/abs/2605.14090" target="_blank" style="color: var(--red);">Synthetic Sociality: How Generative Models Privatize the Social Fabric</a>.
+                It covers many of the ideas in this talk in much greater detail and with more theoretical rigor.
+            </p>
+<section id="slide-2">
+<figure>
+<img src="slides/slide-02.jpg" alt="Slide 2" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p><i>No speaker notes.</i></p>
+</section>
+<hr>
+<section id="slide-3">
+<figure>
+<img src="slides/slide-03.jpg" alt="Slide 3" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p><b>Take these stats with a large pinch of salt</b>, but by my count, <b>about a quarter of the science</b> that goes into SIGGRAPH’s technical program is about generative models nowadays.</p>
+<p><b>Despite many nuanced discussions</b> on improving the results and performance of the diffusion process, we have scarcely engaged the technology&#x27;s societal impacts.</p>
+</section>
+<hr>
+<section id="slide-4">
+<figure>
+<img src="slides/slide-04.jpg" alt="Slide 4" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>While we’re not talking about the impacts of AI on society, Silicon Valley is.</p>
+<p>And, for a lot of them, this is the vision.</p>
+</section>
+<hr>
+<section id="slide-5">
+<figure>
+<img src="slides/slide-05.jpg" alt="Slide 5" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>This isn’t just this one company. OpenAI says: “…”</p>
+<p>They define intelligence in terms of it’s <b>economic</b> value.</p>
+<p>And… understanding automation is difficult general, but more so when it comes to one <b>specific form of work: art.</b></p>
+</section>
+<hr>
+<section id="slide-6">
+<figure>
+<img src="slides/slide-06.jpg" alt="Slide 6" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>Again, while the research community is not thinking about the impacts of our work on on labor, artists <b>right here in LA</b> have to.</p>
+<p>Here is a picture of the screen actor’s guild wrestling with the consequence of a SIGGRAPH-grown technology being used to replace them!</p>
+</section>
+<hr>
+<section id="slide-7">
+<figure>
+<img src="slides/slide-07.jpg" alt="Slide 7" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>We initiate this conversation by presenting generative models through one specific sociotechnical lens.</p>
+<p>I will be simplifying immensely and if you’re an expert in this stuff… well first, we should be friends, but I am also sorry if I offend by simplifying. The talk will include recommended reading and some pointers to get you oriented.</p>
+</section>
+<hr>
+<section id="slide-8">
+<figure>
+<img src="slides/slide-08.jpg" alt="Slide 8" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<ul class="bullets">
+<li>Few things talk is not about.</li>
+<li>This talk is not about the environment. Talk to these folks.</li>
+<li>It’s also not about, e.g., <b>issues of representation in training data</b>, etc.</li>
+<li>Sorry, this will be a <b>dry academic talk full of theory</b>. But you know, <b>you might likely find some of this useful</b> down the line if you are an organizer.</li>
+<li>Disclaimer: <b>only one tradition</b>! If you <b>disagree with their premises</b>, that’s okay! This session already seems to have had quite a few talks in the liberal (or maybe even neoliberal) tradition.</li>
+</ul>
+</section>
+<hr>
+<section id="slide-9">
+<figure>
+<img src="slides/slide-09.jpg" alt="Slide 9" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<ul class="bullets">
+<li>The now infamous “Frankfurt School” <b>posited a new way of doing social science and theorizing society</b> they called <b>critical theory</b>.</li>
+<li>Instead of <b>imitating the posture of being neutral and objective</b>, the idea is to recognize that the theorist is embedded in society and social theory <b>either props up or challenges the social order</b>.</li>
+<li>Instead of pretending there is a neutral objectivity, <b>they say, </b>the theorist should make cognisant what they think the world should look like and then work towards it.</li>
+<li>In the case of critical theory the goal is to help <b>liberate people from domination</b>, including that due to the economic system.</li>
+<li>While the research community does not talk about it, graphics is also socially embedded. Not only in the political economy as it pertains to artists, but our visual culture shapes our society and graphics technologies are at the forefront of shaping our culture.</li>
+</ul>
+</section>
+<hr>
+<section id="slide-10">
+<figure>
+<img src="slides/slide-10.jpg" alt="Slide 10" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>More narrowly, this talk is in critical platform studies as they study automation, these are just here as references if you want to look some of these folks up.</p>
+</section>
+<hr>
+<section id="slide-11">
+<figure>
+<img src="slides/slide-11.jpg" alt="Slide 11" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>Two contrasting views on generative models.</p>
+<p>What is generative models are automating? What capacity in humans? I think this is really at the core of trying to understand what is happening when they are deployed—what are they replacing?</p>
+</section>
+<hr>
+<section id="slide-12">
+<figure>
+<img src="slides/slide-12.jpg" alt="Slide 12" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>First step will be to understand automation as a whole.</p>
+<p>Here is a brief 101 on how to critically examine automation.</p>
+</section>
+<hr>
+<section id="slide-13">
+<figure>
+<img src="slides/slide-13.jpg" alt="Slide 13" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>As is common in critical theory, labor is at the center of our discussion of automation.</p>
+<p>Really, the most important thing to understand is that there is a lower bound oh how much you can pay a person and have them survive off of that and come to work. Reducing labor costs below that necessitates requires automation.</p>
+<p>Now, that is somewhat of a simplistic view. Very influential work has point out examples of automation being introduced despite the newly invented machinery being both more expensive to maintain and worse at the task than the humans.</p>
+<p>In one historical example, a metal worker&#x27;s union was asking for more fair working conditions. The automation, as subpar as it was, gave an excuse to lay off a large parts of the workforce, sow fear into the remaining workers, effectively neutralizing organized labor.</p>
+</section>
+<hr>
+<section id="slide-14">
+<figure>
+<img src="slides/slide-14.jpg" alt="Slide 14" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>Debates on the effects of automation on workers that have existed since the dawn of capital.</p>
+<p>Luddites, pictured here, are nowadays painted as anti-progress curmudgeons but really the machine-breaking movement was a form of protest against capital’s infringement on worker’s rights via automation.</p>
+</section>
+<hr>
+<section id="slide-15">
+<figure>
+<img src="slides/slide-15.jpg" alt="Slide 15" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>In 2026 the Luddite movement echoes once more.</p>
+<p>Industry folks are saying: “…”</p>
+<p>History teaches us that these this sentence is not disconnected from the images behind it. In an age of renewed interest in labor organizing, getting a worse but “good enough” result seems more appealing having a bunch of workers on your hands who want pesky stuff like wages and dignity.</p>
+</section>
+<hr>
+<section id="slide-16">
+<figure>
+<img src="slides/slide-16.jpg" alt="Slide 16" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>So let’s go back to some theory again.</p>
+</section>
+<hr>
+<section id="slide-17">
+<figure>
+<img src="slides/slide-17.jpg" alt="Slide 17" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>We’ll start with the view of generative models as an automation of intelligence.</p>
+</section>
+<hr>
+<section id="slide-18">
+<figure>
+<img src="slides/slide-18.jpg" alt="Slide 18" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>And really when we’re talking about an automation of intelligence in a critical theory context, we’re talking about an <b>automation of mental labor</b>.</p>
+</section>
+<hr>
+<section id="slide-19">
+<figure>
+<img src="slides/slide-19.jpg" alt="Slide 19" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<ul class="bullets">
+<li>It’s not just me!</li>
+<li>Charles Babbage himself, the guy who invented the first computer, viewed automation as intertwined with labor.</li>
+<li>He was <b>inspired by the division of labor in a factory</b>:</li>
+<li>if <b>used to be a shoemaker</b>, <b>under division of labor</b>, you’re just <b>hammering the sole</b>.</li>
+<li><b>Mental labor</b> can also be made into a factory.</li>
+<li>Babbage said if once the job is so repetitive a machine can do it.</li>
+<li>It’s funny, he was really excited about the shareholder value this would bring!</li>
+</ul>
+<hr>
+<p>Longer Version, Cut from Talk</p>
+<p>Charles Babbage himself, the guy who invented the first computer, viewed his invention this way. And he called it the Labor Theory of the Machine.</p>
+<p>Smithian economics viewed automation in terms of a division of labor: once labor is divided in a factory, the worker becomes deskilled and their jobs atomized. If you used to be a shoemaker, you could make the whole shoe, but now you’re just, e.g., repeatedly hammering the shoe sole. Smith said that hammering is now simple enough to be automated and can now be done by a machine!</p>
+<p>Meanwhile, over in France, de Prony wrote this paper on how we could compute logarithms in a factory-like setting, with a bunch of deskilled workers at the bottom and a few rich mathematicians at the top.</p>
+<p>Babbage found out about this and connected the dots and said, wait a minute, since mental labor can be divided up just like mechanical labor, I bet we could build a machine to automate the mental labor! And he was really excited about how much money this could save for the person who owned the machine. Then he went on to <b>design</b> the first computer as a realization of that dream.</p>
+</section>
+<hr>
+<section id="slide-20">
+<figure>
+<img src="slides/slide-20.jpg" alt="Slide 20" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<ul class="bullets">
+<li>If I try to <b>connect what these scholars are saying to graphics</b>, we can see that today, visual <b>production is also divided into a factory</b> and computer graphics has automated different stages within this factory line.</li>
+<li>I’ve tried to circle and color code the components of the factory line which correspond to different academic fields within graphics, we have geometry, animation, simulation, rendering, and computational photography.</li>
+<li>This is certainly <b>one way of viewing computer graphics</b>! Our job as researchers is to automate away the components of this pipeline.</li>
+<li>Importantly, critical theory reminds us that automated animation exists because of all the work we are doing today that we <b>lose ownership over under current socioeconomic labor relations</b>. Our <b>work is turned into private capital</b> that someone else owns and that they will use for future generation of generative models that will then go into getting me fired from my big studio job.</li>
+</ul>
+</section>
+<hr>
+<section id="slide-21">
+<figure>
+<img src="slides/slide-21.jpg" alt="Slide 21" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>I think it’s really interesting that generative models make it visually really evident that their outputs really would not look the way they look without the labor the artist put into their art that has now crystalized into this privately held thing.</p>
+</section>
+<hr>
+<section id="slide-22">
+<figure>
+<img src="slides/slide-22.jpg" alt="Slide 22" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>It is tempting to think that automation drives societal change (this is true to an extent), but Silicon Valley would like us to believe automation is inevitable.</p>
+<p>But the thing to remember, really, is that the choice to automate, and the choice of what gets automated stems from the way we materially organize our world and our political economy.</p>
+<p>In the last two examples, we saw that automation is a consequence of the factory, both in the way a factory atomizes and deskills workers and the way automation suppresses organized labor.</p>
+</section>
+<hr>
+<section id="slide-23">
+<figure>
+<img src="slides/slide-23.jpg" alt="Slide 23" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p><i>No speaker notes.</i></p>
+</section>
+<hr>
+<section id="slide-24">
+<figure>
+<img src="slides/slide-24.jpg" alt="Slide 24" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>The alternative view is that generative models automate intellectual labor AND something else, something a bit broader that encompasses labor relations. So this is not really an alternative view as much as it is a complementary one.</p>
+</section>
+<hr>
+<section id="slide-25">
+<figure>
+<img src="slides/slide-25.jpg" alt="Slide 25" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>Disclaimer: this is my work from a recent preprint with Professor Moira Weigel.</p>
+</section>
+<hr>
+<section id="slide-26">
+<figure>
+<img src="slides/slide-26.jpg" alt="Slide 26" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>The question we ask is: is intelligence all there is? Are we really upset because these models are better calculators than us?</p>
+</section>
+<hr>
+<section id="slide-27">
+<figure>
+<img src="slides/slide-27.jpg" alt="Slide 27" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<ul class="bullets">
+<li>Sure, they are good at writing code and taking derivatives of nasty equations, but if you look at some of the most prominent use cases, they’re being <b>used to make art</b>, <b>write email</b> for us, folks are having <b>AI boyfriends</b>, <b>using it for therapy</b>, etc.</li>
+<li>Is all of this just mental labor?</li>
+<li>In a way, all of these things are things we do to connect with other humans! So what does it mean when a machine—which is not human—does them instead?</li>
+<li><b>We claim that there is a broader human capacity being automated</b> at a massive scale, one that <b>includes labor power but also other things</b>, it is the <b>effort we put into building social ties</b> with other humans, e.g., by making art.</li>
+</ul>
+</section>
+<hr>
+<section id="slide-28">
+<figure>
+<img src="slides/slide-28.jpg" alt="Slide 28" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>Really the picture is this:</p>
+<p>It used to be that mechanical labor was divided up and produced in a factory line. And then intellectual labor.</p>
+<p>In our paper, we claim that human sociality has become a <b>factory line of commodity manufacture</b>, where that commodity is “content”. And so now, it is our sociality that has been transformed.</p>
+</section>
+<hr>
+<section id="slide-29">
+<figure>
+<img src="slides/slide-29.jpg" alt="Slide 29" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>In a world where all art is reduced to this commodity of Content—which generates profits for digital the platform—who cares whether it’s a machine making the commodity or a human?</p>
+<p>As an aside, did you notice at some point how we stopped having filmmakers, artists, musicians and everyone got reduced to being a content creator?</p>
+<p>There is a reason all examples in Lauren’s presentation were ads! Ads are commodity manufacture in its purest form!</p>
+</section>
+<hr>
+<section id="slide-30">
+<figure>
+<img src="slides/slide-30.jpg" alt="Slide 30" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>Lots of this stuff came right here from SIGGRAPH. AI avatars and deepfakes are all SIGGRAPH technologies.</p>
+<p>Many of which are being used to substitute for human intimacy and actually most often via non-consensual sexually explicit imagery.</p>
+</section>
+<hr>
+<section id="slide-31">
+<figure>
+<img src="slides/slide-31.jpg" alt="Slide 31" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>So in summary:</p>
+<ul class="bullets">
+<li>The precondition for generative models was that art existed as content on digital platforms and that digital platforms rely on an ever increasing stream of content to make money. Because it is reduced to this commodity of content, the platforms don’t care how it’s made, it’s not there to connect people, it’s there.</li>
+<li>It only exists on the internet because people put in online to connect with other people.</li>
+<li>Model outputs are content devoid of social connection!</li>
+</ul>
+</section>
+<hr>
+<section id="slide-32">
+<figure>
+<img src="slides/slide-32.jpg" alt="Slide 32" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>So if there is one thing you take away from this part, it is that generative models disconnect us from humans, but connect us to a thing Sam Altman controls.</p>
+</section>
+<hr>
+<section id="slide-33">
+<figure>
+<img src="slides/slide-33.jpg" alt="Slide 33" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p><i>No speaker notes.</i></p>
+</section>
+<hr>
+<section id="slide-34">
+<figure>
+<img src="slides/slide-34.jpg" alt="Slide 34" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>Walter Benjamin believed that the age of mechanical reproduction of art would bring liberation.</p>
+<p>This is really a common theme in critical theory: traces of liberation must exist in whatever society we find ourselves, otherwise liberation is not possible. We must believe this if we believe in achieving a better world.</p>
+<p>And the same logic applies to generative models. These things are objectively useful for some things! And that there must be traces of liberation in them too.</p>
+<p>Ultimately, our goal as graphics researchers should be to find those traces, to find how to make versions of these technologies that help embody principles of liberation and not those of domination.</p>
+</section>
+<hr>
+<section id="slide-35">
+<figure>
+<img src="slides/slide-35.jpg" alt="Slide 35" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>Even if we found ourself in a more just world tomorrow via various policy changes, existing models would still embody the socioeconomic conditions under which they were made. So, it is important to take inspiration from what we imagine that better world will look like and instill that into our research agenda.</p>
+<p>Some alternative paths to pure automation are:</p>
+<ul class="bullets">
+<li>Set a north star for yourself which is not pure diffusion sampling quality or speed. Some alternatives we propose in our paper are to build in mechanisms for democracy or for consent directly into generative models.</li>
+<li>Alternatively, we could tread graphics as co-design.</li>
+</ul>
+</section>
+<hr>
+<section id="slide-36">
+<figure>
+<img src="slides/slide-36.jpg" alt="Slide 36" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>By co-design, I simply mean: you as an artist, and me as a researcher get together and design a cool new tool that we want to use!</p>
+<p>Some labs in academia and industry already practice this and we would really like to see this trend grow. In fact, this SIGGRAPH, we co-organized this awesome Birds of a Feather event, together with Emilie Yu, Claudia Davis, Laleh Mehran, Chris Coleman, and Jennifer Jacobs, where we invited artists, academics and industry folks to discuss methods of co-design.</p>
+</section>
+<hr>
+<section id="slide-37">
+<figure>
+<img src="slides/slide-37.jpg" alt="Slide 37" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>Ultimately, I want to leave you with one take-away: graphics is a social discipline, <b>as much as we all like to pretend it is not</b>!</p>
+<p>Really, think about it. Our work as graphics practitioners impacts not only the labor issues we discussed here, but shapes our entire visual culture. Generative models are all over the place all over your social media feeds. Computer graphics shapes our societies.</p>
+<p>I think gone are the days of being able to pretend this is not the case.</p>
+</section>
+<hr>
+<section id="slide-38">
+<figure>
+<img src="slides/slide-38.jpg" alt="Slide 38" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>And if you’re a graphics researcher, consider this a call to action. Let’s recognize ourselves as making graphics technologies from within a larger socioeconomic status.</p>
+</section>
+<hr>
+<section id="slide-39">
+<figure>
+<img src="slides/slide-39.jpg" alt="Slide 39" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p>Thank you everyone, please get in touch with your hottest takes. Especially if you’re an artist… maybe if you’re a CEO or shareholder, don’t get in touch.</p>
+</section>
+<hr>
+<section id="slide-40">
+<figure>
+<img src="slides/slide-40.jpg" alt="Slide 40" style="width:100%;height:auto;max-width:100%;">
+</figure>
+<p><i>No speaker notes.</i></p>
+</section>
+<hr>
+        </div>
+
+        <div id="BibTeX" style="width:100%;" class="content-left">
+            <h2>BibTeX</h2>
+            <pre id="bibtex">
+            <code id="bibtex-code" "background-color: #f1f1f1;">
+            </code>
+        </pre>
+        </div>
+
+        <div id="footer">
+            <p> © 2026 Ana Dodik </p>
+        </div>
+    </div>
+</body>
+
+</html>

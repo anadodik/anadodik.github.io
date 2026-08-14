@@ -24,14 +24,25 @@
             : '<i class="fa fa-chevron-down" aria-hidden="true"></i>';
           collapseButton.setAttribute('aria-label', expanded ? 'Collapse News' : 'Expand News');
         });
+        
+        const bibtexDialog = document.getElementById('bibtex-dialog');
+        const bibtexText = document.getElementById('bibtex-text');
+        document.querySelectorAll('a.bibtex-link').forEach(link => {
+          link.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const text = await fetch(link.href).then(r => r.text());
+            bibtexText.textContent = text;
+            bibtexDialog.showPopover();
+          });
+        });
       }
     </script>
 
     <title>Ana Dodik</title>
     <meta charset="utf-8">
     <link href="css/style.css" type="text/css" rel="stylesheet"></link>
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,400;8..144,600&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,300;0,8..144,400;0,8..144,600;1,8..144,100;1,8..144,300;1,8..144,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">
@@ -142,12 +153,36 @@
           </div>
           <div id="publication-links">
             {% for resource_name, resource_link in publication.resources.items() %}
-              <div id="publication-link"><a {{ 'type="text/plain"' if resource_name == 'bibtex' else '' }} href="{{ resource_link }}"><i class="{{ resource_icons[resource_name] }}"></i> {{ resource_readable_names[resource_name] }} </a></div>
+            {% if resource_name == 'bibtex' %}
+              <div id="publication-link">
+                  <a class="bibtex-link" href="{{ resource_link }}">
+                    <i class="{{ resource_icons[resource_name] }}"></i>
+                    {{ resource_readable_names[resource_name] }}
+                  </a>
+                  <!--<button type="button"
+                    class="bibtex-link"
+                    popovertarget="bibtex-dialog"
+                    data-bib="{{ resource_link }}">
+                      <i class="{{ resource_icons[resource_name] }}"></i> {{ resource_readable_names[resource_name] }}
+                  </button>-->
+              </div>
+            {% else %}
+              <div id="publication-link">
+                <a href="{{ resource_link }}">
+                  <i class="{{ resource_icons[resource_name] }}"></i> 
+                  {{ resource_readable_names[resource_name] }}
+                </a>
+              </div>
+            {% endif %}
             {% endfor %}
           </div>
         </div>
       </div>
       {% endfor %}
+      <dialog id="bibtex-dialog" class="bibtex-dialog" popover="auto">
+        <h2>BibTeX</h2>
+        <pre id="bibtex-text"></pre>
+      </dialog>
 		</div>
     <!-- <div id="media" class="content-left">
       <h2>Media</h2>

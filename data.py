@@ -133,6 +133,22 @@ PERSON = Person(
 
 PUBLICATIONS = [
     Publication(
+        title="Critical Labor Theory of Generative Models",
+        nickname="critical-labor-history",
+        authors=[
+            "Ana Dodik",
+        ],
+        year="2026",
+        venue="SIGGRAPH Talk",
+        resources={
+            "website": "/publication/critical-labor-history/",
+            "presentation": "/publication/critical-labor-history/#talk-slides",
+            "paper": "/publication/critical-labor-history/critical-labor-history.pdf",
+            "bibtex": "/publication/critical-labor-history/dodiks2026critical.bib",
+        },
+        featured_image="slides/slide-01.jpg",
+    ),
+    Publication(
         title="Tangent Blow-Ups for Processing Non-Manifold Geometry",
         nickname="blowups",
         authors=["Alice Petrov", "Mohammad Sina Nabizadeh", "Ana Dodik", "Justin Solomon"],
@@ -175,7 +191,7 @@ PUBLICATIONS = [
         year="2026",
         venue="SIGGRAPH (Journal Track)",
         resources={
-            # "website": "/publication/iskra",
+            "website": "https:://iskgra-graphics.org/",
             "website-soon": "#",
             "paper": "/publication/iskra/iskra.pdf",
             "arXiv": "https://arxiv.org/abs/2602.12105",
