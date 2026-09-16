@@ -191,7 +191,7 @@ PUBLICATIONS = [
         year="2026",
         venue="SIGGRAPH (Journal Track)",
         resources={
-            "website": "https:://iskgra-graphics.org/",
+            "website": "https://iskra-graphics.org/",
             "website-soon": "#",
             "paper": "/publication/iskra/iskra.pdf",
             "arXiv": "https://arxiv.org/abs/2602.12105",
