@@ -133,6 +133,28 @@ PERSON = Person(
 
 PUBLICATIONS = [
     Publication(
+        title="Social.Wiki: A Web Held in Common",
+        nickname="social-wiki",
+        authors=[
+            "Theia Henderson",
+            "Carmel Schare",
+            "Ana Dodik",
+            "Clemens N. Klokmose",
+            "Ziv Epstein",
+            "David D. Clark",
+            "David R. Karger"
+        ],
+        year="2026",
+        venue="UIST",
+        resources={
+            "website": "https://social.wiki/",
+            "paper": "/publication/social-wiki/social-wiki.pdf",
+            "arXiv": "https://arxiv.org/abs/2608.19433",
+            "bibtex": "/publication/social-wiki/henderson2026socialwiki.bib",
+        },
+        featured_image="teaser.jpg",
+    ),
+    Publication(
         title="Critical Labor Theory of Generative Models",
         nickname="critical-labor-history",
         authors=[
@@ -144,7 +166,7 @@ PUBLICATIONS = [
             "website": "/publication/critical-labor-history/",
             "presentation": "/publication/critical-labor-history/#talk-slides",
             "paper": "/publication/critical-labor-history/critical-labor-history.pdf",
-            "bibtex": "/publication/critical-labor-history/dodiks2026critical.bib",
+            "bibtex": "/publication/critical-labor-history/dodik2026critical.bib",
         },
         featured_image="slides/slide-01.jpg",
     ),
@@ -182,7 +204,7 @@ PUBLICATIONS = [
             # "talk": "#",
             "bibtex": "/publication/synthsoc/dodikweigel2025synthsoc.bib",
         },
-        featured_image="featured.png",
+        featured_image="featured2.jpg",
     ),
     Publication(
         title="Iskra: A System for Inverse Geometry Processing",
@@ -192,7 +214,7 @@ PUBLICATIONS = [
         venue="SIGGRAPH (Journal Track)",
         resources={
             "website": "https://iskra-graphics.org/",
-            "website-soon": "#",
+            # "website-soon": "#",
             "paper": "/publication/iskra/iskra.pdf",
             "arXiv": "https://arxiv.org/abs/2602.12105",
             "code": "https://github.com/anadodik/iskra",
