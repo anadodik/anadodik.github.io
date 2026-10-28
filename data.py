@@ -189,6 +189,18 @@ PUBLICATIONS = [
         featured_image="featured.png",
     ),
     Publication(
+        title="Differentiable Geometry Processing in Python",
+        nickname="diffgp-course",
+        authors=["Ana Dodik*", "Ahmed H. Mahmoud*", "(*joint first authors)"],
+        year="2026",
+        venue="Eurographics Symposium on Geometry Processing Graduate School",
+        resources={
+            "website": "https://iskra-graphics.org/guide/index.html",
+            "video": "https://www.youtube.com/watch?v=Eg5EJZhYoGE",
+        },
+        featured_image="featured.jpg",
+    ),
+    Publication(
         title="Synthetic Sociality: How Generative Models Privatize the Social Fabric",
         nickname="synthsoc",
         authors=["Ana Dodik", "Moira Weigel"],
